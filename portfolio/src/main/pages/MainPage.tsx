@@ -6,6 +6,7 @@ import ContactSection from "./components/ContactSection";
 import FooterSection from "./components/FooterSection";
 import HomeSection from "./components/HomeSection";
 import ProjectsSection from "./components/ProjectsSection";
+import ExperienceSection from './components/ExperienceSection';
 
 const MainPage = () => {
   return (
@@ -20,6 +21,10 @@ const MainPage = () => {
 
       <section id="projects" className="min-h-screen">
         <ProjectsSection />
+      </section>
+
+      <section id="experience" className="min-h-screen">
+        <ExperienceSection />
       </section>
 
       <section id="achievement" className="min-h-screen">

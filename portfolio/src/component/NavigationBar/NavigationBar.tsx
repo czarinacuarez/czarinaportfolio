@@ -46,15 +46,31 @@ const NavigationBar = () => {
       className="fixed top-0 z-10 hidden md:flex pt-2 w-full  justify-center"
     >
       <nav className="hidden md:flex justify-between gap-3 rounded-3xl bg-white p-3 *:rounded-xl *:border *:border-gray-200 *:px-7 *:py-2 *:transition-colors *:duration-300 *:hover:bg-gray-200 *:focus-visible:bg-gray-200">
-        <a onClick={() => scrollToSection('home')}
-          className={activeSection === 'home' ? 'bg-gray-200' : ''}>{t('titles.home')}</a>
-        <a onClick={() => scrollToSection('about')}
-          className={activeSection === 'about' ? 'bg-gray-200' : ''}>{t('titles.about')}</a>
-        <a onClick={() => scrollToSection('experience')}
-          className={activeSection === 'experience' ? 'bg-gray-200' : ''}>{t('titles.experience')}</a>
-        <a onClick={() => scrollToSection('projects')}
-          className={activeSection === 'projects' ? 'bg-gray-200' : ''}>{t('titles.projects')}</a>
-        <a href="" className="bg-gray-200">
+        <button
+          onClick={() => scrollToSection('home')}
+          className={`${activeSection === 'home' ? 'bg-gray-200' : ''}`}
+          aria-current={activeSection === 'home' ? 'page' : undefined}>
+          {t('titles.home')}
+        </button>
+        <button
+          onClick={() => scrollToSection('about')}
+          className={`${activeSection === 'about' ? 'bg-gray-200' : ''}`}
+          aria-current={activeSection === 'about' ? 'page' : undefined}>
+          {t('titles.about')}
+        </button>
+        <button
+          onClick={() => scrollToSection('experience')}
+          className={`${activeSection === 'experience' ? 'bg-gray-200' : ''}`}
+          aria-current={activeSection === 'experience' ? 'page' : undefined}>
+          {t('titles.experience')}
+        </button>
+        <button
+          onClick={() => scrollToSection('projects')}
+          className={`${activeSection === 'projects' ? 'bg-gray-200' : ''}`}
+          aria-current={activeSection === 'projects' ? 'page' : undefined}>
+          {t('titles.projects')}
+        </button>
+        <a href="/resume.pdf" className="bg-gray-200">
           <span className="">{t('titles.resume')}</span>
         </a>
       </nav>

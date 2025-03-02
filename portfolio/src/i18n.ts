@@ -6,7 +6,7 @@ import Backend from "i18next-http-backend";
 i18next.use(LanguageDetector).use(initReactI18next).use(Backend).init({
   returnObjects: true,
   fallbackLng: "en",
-  debug: true,
+  debug: process.env.NODE_ENV !== 'production',
   backend: {
     loadPath: '/locales/{{lng}}/{{ns}}.json'
   }

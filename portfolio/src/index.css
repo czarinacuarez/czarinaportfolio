@@ -5,10 +5,8 @@
 
 @import "tailwindcss";
 
-:root{
-    background-color: aqua;
-}
-@theme {
+
+:root {
     --font-cursive: "Playfair Display", serif;
     --font-straight: "Source Sans 3", serif;
 
