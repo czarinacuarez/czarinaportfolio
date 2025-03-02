@@ -1,8 +1,12 @@
+import React from 'react';
+import { ActiveSectionProvider } from './context/activeSection'
 import { MainRouter } from './main/routes/MainRouter'
 
 function App() {
   return (
-    <MainRouter />
+    <ActiveSectionProvider>
+          <MainRouter />
+    </ActiveSectionProvider>
   )
 }
 
