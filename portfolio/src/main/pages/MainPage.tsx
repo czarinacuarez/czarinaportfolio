@@ -19,12 +19,12 @@ const MainPage = () => {
         <AboutSection />
       </section>
 
-      <section id="projects" className="min-h-screen">
-        <ProjectsSection />
-      </section>
-
       <section id="experience" className="min-h-screen">
         <ExperienceSection />
+      </section>
+
+      <section id="projects" className="min-h-screen">
+        <ProjectsSection />
       </section>
 
       <section id="achievement" className="min-h-screen">
