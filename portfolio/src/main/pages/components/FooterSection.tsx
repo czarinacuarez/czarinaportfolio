@@ -1,6 +1,7 @@
+import React from 'react';
 
-const FooterSection = () =>{
-  return(
+const FooterSection = () => {
+  return (
     <div className="text-center">Footer Section</div>
   )
 }

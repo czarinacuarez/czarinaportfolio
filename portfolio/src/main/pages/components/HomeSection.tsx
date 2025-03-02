@@ -1,6 +1,7 @@
+import React from 'react';
 
-const HomeSection = () =>{
-  return(
+const HomeSection = () => {
+  return (
     <div className="text-center">Home Section</div>
   )
 }

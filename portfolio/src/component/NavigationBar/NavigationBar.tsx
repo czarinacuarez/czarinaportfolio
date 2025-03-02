@@ -1,11 +1,16 @@
+import React from 'react';
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useRef, useState } from "react";
+import { useActiveSection } from "../../hooks/useActiveSection";
+import { useTranslation } from 'react-i18next';
 
 
 const NavigationBar = () => {
   const [isHidden, setIsHidden] = useState(false);
   const { scrollY } = useScroll();
   const lastYRef = useRef(0);
+  const { t } = useTranslation('translations');
+  const activeSection = useActiveSection();
 
   useMotionValueEvent(scrollY, "change", (y) => {
     const difference = y - lastYRef.current;
@@ -14,7 +19,15 @@ const NavigationBar = () => {
 
       lastYRef.current = y;
     }
+
   });
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <motion.div
@@ -30,15 +43,19 @@ const NavigationBar = () => {
         },
       }}
       transition={{ duration: 0.2 }}
-      className="fixed top-0 z-10 flex w-full  justify-center pt-3"
+      className="fixed top-0 z-10 hidden md:flex pt-2 w-full  justify-center"
     >
-      <nav className="flex justify-between gap-3 rounded-3xl bg-white p-5 *:rounded-xl *:border *:border-gray-200 *:px-7 *:py-2 *:transition-colors *:duration-300 *:hover:bg-gray-200 *:focus-visible:bg-gray-200">
-        <a href="#home">Home</a>
-        <a href="#">About</a>
-        <a href="#">Experience </a>
-        <a href="#">Projects</a>
-        <a href="#" className="bg-gray-200">
-          <span className="">Resume</span>
+      <nav className="hidden md:flex justify-between gap-3 rounded-3xl bg-white p-3 *:rounded-xl *:border *:border-gray-200 *:px-7 *:py-2 *:transition-colors *:duration-300 *:hover:bg-gray-200 *:focus-visible:bg-gray-200">
+        <a onClick={() => scrollToSection('home')}
+          className={activeSection === 'home' ? 'bg-gray-200' : ''}>{t('titles.home')}</a>
+        <a onClick={() => scrollToSection('about')}
+          className={activeSection === 'about' ? 'bg-gray-200' : ''}>{t('titles.about')}</a>
+        <a onClick={() => scrollToSection('experience')}
+          className={activeSection === 'experience' ? 'bg-gray-200' : ''}>{t('titles.experience')}</a>
+        <a onClick={() => scrollToSection('projects')}
+          className={activeSection === 'projects' ? 'bg-gray-200' : ''}>{t('titles.projects')}</a>
+        <a href="" className="bg-gray-200">
+          <span className="">{t('titles.resume')}</span>
         </a>
       </nav>
     </motion.div>

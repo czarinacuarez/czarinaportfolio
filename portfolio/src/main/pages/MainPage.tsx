@@ -1,3 +1,5 @@
+import React from 'react';
+
 import AboutSection from "./components/AboutSection";
 import AchievementsSection from "./components/AchievementsSection";
 import ContactSection from "./components/ContactSection";
@@ -5,10 +7,10 @@ import FooterSection from "./components/FooterSection";
 import HomeSection from "./components/HomeSection";
 import ProjectsSection from "./components/ProjectsSection";
 
-const MainPage = () =>{
-  return(
+const MainPage = () => {
+  return (
     <div>
-         <section id="home" className="min-h-screen">
+      <section id="home" className="min-h-screen">
         <HomeSection />
       </section>
 
