@@ -34,6 +34,7 @@ const NavigationBar = () => {
       animate={isHidden ? "hidden" : "visible"}
       whileHover="visible"
       onFocusCapture={() => setIsHidden(false)}
+      aria-hidden={isHidden}
       variants={{
         hidden: {
           y: "-90%",
@@ -71,7 +72,7 @@ const NavigationBar = () => {
           {t('titles.projects')}
         </button>
         <a href="/resume.pdf" className="bg-gray-200">
-          <span className="">{t('titles.resume')}</span>
+          {t('titles.resume')}
         </a>
       </nav>
     </motion.div>

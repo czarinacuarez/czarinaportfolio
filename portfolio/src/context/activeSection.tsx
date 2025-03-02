@@ -1,7 +1,9 @@
-// to find active section
-
-import { createContext, useContext, useState } from "react";
-import type { SectionName  } from "../types/section";
+/**
+ * Context for tracking and managing the active section in the portfolio
+ * Used to highlight the current section in navigation and control scroll behavior
+ */
+import React, { createContext, useContext, useState } from "react";
+import type { SectionName } from "../types/section";
 
 type ActiveSectionContextType = {
   activeSection: SectionName;

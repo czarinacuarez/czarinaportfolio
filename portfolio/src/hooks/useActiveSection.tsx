@@ -1,26 +1,16 @@
 import { useEffect, useState } from 'react';
 import type { SectionName } from '../types/section';
+import { SECTION_NAMES } from '../constants/sections';
+import { throttle } from 'lodash';
 
 function isSectionName(id: string): id is SectionName {
-  return ['home', 'about', 'experience', 'projects', 'contact'].includes(id);
+  return SECTION_NAMES.includes(id as SectionName);
 }
 
 export function useActiveSection() {
   const [activeSection, setActiveSection] = useState<SectionName>('home');
 
   useEffect(() => {
-    // Simple throttle function
-    const throttle = (fn: (...args: unknown[]) => void, delay: number) => {
-      let lastCall = 0;
-      return (...args: unknown[]) => {
-        const now = new Date().getTime();
-        if (now - lastCall >= delay) {
-          lastCall = now;
-          fn(...args);
-        }
-      };
-    };
-
     const handleScroll = () => {
       const sections = document.querySelectorAll<HTMLElement>('section[id]');
       const scrollPosition = window.scrollY + window.innerHeight / 2;
@@ -37,10 +27,11 @@ export function useActiveSection() {
       });
     };
 
-    window.addEventListener('scroll', throttle(handleScroll, 200));
+    const throttledHandleScroll = throttle(handleScroll, 200);
+    window.addEventListener('scroll', throttledHandleScroll);
     handleScroll(); // Check initial position
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', throttledHandleScroll);
   }, []);
 
   return activeSection;
