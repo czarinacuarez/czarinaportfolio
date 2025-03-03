@@ -1,1 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  --font-cursive: "Playfair Display", serif;
+  --font-straight: "Source Sans 3", serif;
+  --radius-default: 20px;
+  --font-weight-semibold: 500;
+
+  /** COLORS **/
+  --color-rose-100: #ffe3e8;
+  --color-rose-200: #f1c7ce;
+  --color-rose-300: #e6a6b1;
+  --color-rose-400: #e08b99;
+  --color-rose-500: #d46679;
+}
+
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+  }
+  h2 {
+    font-size: var(--text-xl);
+  }
+
+  .home-shadow {
+    box-shadow: 0 4px 30px white;
+    transition: ease-in 2s;
+  }
+
+  .default-shadow {
+    box-shadow: 0 4px 30px var(--color-rose-100);
+    transition: ease-in 2s;
+  }
+
+  .cutesy-gradient {
+    background-image: linear-gradient(var(--color-rose-100), white);
+  }
+
+  nav {
+    &.main-nav {
+      font-size: 14px;
+      font-weight: var(--font-weight-semibold);
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0.52);
+      border-radius: 16px;
+
+      backdrop-filter: blur(5.2px);
+      -webkit-backdrop-filter: blur(5.2px);
+      border: 1px solid rgba(255, 255, 255, 1);
+
+      button {
+        color: var(--color-rose-300);
+        padding: 20px;
+        &:hover {
+          cursor: pointer;
+        }
+
+        &.active {
+          background-image: linear-gradient(var(--color-rose-100), white);
+          color: var(--color-rose-400);
+        }
+      }
+      a {
+        padding: 20px;
+        font-family: var(--font-straight);
+        background-image: linear-gradient(var(--color-rose-100), white);
+        box-shadow: 0 4px 30px white;
+        color: var(--color-rose-300);
+        font-weight: var(--font-weight-semibold);
+
+        &.special {
+          padding: 0;
+          background-image: none;
+        }
+        &:hover {
+          background-image: linear-gradient(var(--color-rose-300), var(--color-rose-200));
+          box-shadow: 0 4px 30px var(--color-rose-100);
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+#home {
+  background-image: url("./assets/img/pinkclouds.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

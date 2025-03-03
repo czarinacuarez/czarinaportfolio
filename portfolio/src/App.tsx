@@ -1,12 +1,12 @@
-import { Suspense } from 'react'
+import React from 'react';
+import { ActiveSectionProvider } from './context/activeSection'
 import { MainRouter } from './main/routes/MainRouter'
-import LoadingSpinner from './component/LoadingSpinner/LoadingSpinner'
 
 function App() {
   return (
-    <Suspense fallback={<LoadingSpinner />}>
-    <MainRouter />
-  </Suspense>
+    <ActiveSectionProvider>
+          <MainRouter />
+    </ActiveSectionProvider>
   )
 }
 

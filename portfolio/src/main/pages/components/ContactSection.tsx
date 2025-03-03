@@ -1,6 +1,7 @@
+import React from 'react';
 
-const ContactSection = () =>{
-  return(
+const ContactSection = () => {
+  return (
     <div className="text-center">Contact Section</div>
   )
 }

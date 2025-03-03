@@ -1,6 +1,7 @@
+import React from 'react';
 
-const AchievementsSection = () =>{
-  return(
+const AchievementsSection = () => {
+  return (
     <div className="text-center">Achievements Section</div>
   )
 }
