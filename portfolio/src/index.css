@@ -71,11 +71,14 @@
         color: var(--color-rose-300);
         font-weight: var(--font-weight-semibold);
 
+        &.special {
+          padding: 0;
+          background-image: none;
+        }
         &:hover {
           background-image: linear-gradient(var(--color-rose-300), var(--color-rose-200));
           box-shadow: 0 4px 30px var(--color-rose-100);
           color: white !important;
-          box-shadow: white;
         }
       }
     }

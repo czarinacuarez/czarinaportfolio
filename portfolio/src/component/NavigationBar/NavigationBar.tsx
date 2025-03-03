@@ -25,8 +25,11 @@ const Path = (props: PathProps) => (
   />
 )
 
-const MenuToggle = ({ toggle }: { toggle: () => void }) => (
-  <button className="toggle" onClick={toggle}>
+const MenuToggle = ({ toggle, isOpen }: { toggle: () => void; isOpen: boolean }) => (
+  <button className="toggle" onClick={toggle}
+    aria-label="Toggle navigation menu"
+    aria-expanded={isOpen}
+    aria-controls="mobile-menu" >
     <svg width="20" height="20" viewBox="0 0 23 23">
       <Path
         variants={{
@@ -86,7 +89,10 @@ const NavigationBar = () => {
 
 
   const NavButton = ({ section, icon, onClick, isActive }: NavButtonProps) => (
-    <button onClick={onClick}>
+    <button onClick={onClick}
+      aria-current={isActive ? 'page' : undefined}
+      aria-label={t(`titles.${section}`)
+      }>
       <div className={`flex gap-2 align-center rounded-2xl p-2 ${isActive ? 'cutesy-gradient default-shadow *:text-rose-400' : '*:text-rose-300'
         }`}>
         <div className={`${isActive ? 'bg-white' : 'bg-rose-50'} p-3 rounded-xl`}>
@@ -113,13 +119,13 @@ const NavigationBar = () => {
   return (
     <div>
       <div className='fixed w-full top-0 z-10 flex p-2 justify-between items-center bg-transparent'>
-        <img src={logo} className='size-16'></img>
+        <img src={logo} className='size-16' alt="Portfolio Logo"></img>
         <motion.nav
           className=' md:hidden px-3'
           initial={false}
           animate={isOpen ? "open" : "closed"}
         >
-          <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+          <MenuToggle toggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
         </motion.nav>
         {/* Add the mobile menu animation */}
       </div> <motion.div
@@ -146,8 +152,11 @@ const NavigationBar = () => {
           }
         }}
         className="fixed  md:hidden  left-0 right-0 top-[80px] mx-auto w-[90%] max-w-[800px] lg:hidden"
+        id="mobile-menu" role="menu"
       >
-        <nav className={`flex flex-col gap-2 main-nav justify-between  *:text-left  rounded-3xl p-3 *:rounded-default *:py-2 *:transition-colors *:duration-300 *:hover:active *:focus-visible:active ${activeSection === 'home' ? 'home-shadow' : 'default-shadow'}`}>
+        <nav className={`flex flex-col gap-2 main-nav justify-between  *:text-left  rounded-3xl p-3
+        *:rounded-default *:py-2 *:transition-colors *:duration-300 *:hover:active *:focus-visible:active
+           ${activeSection === 'home' ? 'home-shadow' : 'default-shadow'}`}>
           {navItems.map((item) => (
             <NavButton
               key={item}
@@ -158,7 +167,7 @@ const NavigationBar = () => {
             />
           ))}
 
-          <button >
+          <a href="/resume.pdf" className='mx-4 special' >
             <div className='flex gap-2 align-center rounded-2xl p-2 *:text-rose-300'>
               <div className='bg-rose-50 p-3 rounded-xl'>
                 <ResumeIcon className='size-6' />
@@ -168,7 +177,7 @@ const NavigationBar = () => {
                 <span className='text-xs'>{t('navDef.resume')}</span>
               </div>
             </div>
-          </button>
+          </a>
         </nav>
       </motion.div>
       <motion.div
@@ -200,7 +209,7 @@ const NavigationBar = () => {
           ))}
           <a
             href="/resume.pdf"
-            className={activeSection === 'home' ? 'home-shadow' : 'default-shadow'}
+            className={activeSection === 'home' ? 'special-a home-shadow' : 'special-a default-shadow'}
           >
             {t('titles.resume')}
           </a>
