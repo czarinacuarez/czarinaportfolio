@@ -91,8 +91,7 @@ const NavigationBar = () => {
   const NavButton = ({ section, icon, onClick, isActive }: NavButtonProps) => (
     <button onClick={onClick}
       aria-current={isActive ? 'page' : undefined}
-      aria-label={t(`titles.${section}`)
-      }>
+      aria-label={t(`titles.${section}`)}>
       <div className={`flex gap-2 align-center rounded-2xl p-2 ${isActive ? 'cutesy-gradient default-shadow *:text-rose-400' : '*:text-rose-300'
         }`}>
         <div className={`${isActive ? 'bg-white' : 'bg-rose-50'} p-3 rounded-xl`}>
