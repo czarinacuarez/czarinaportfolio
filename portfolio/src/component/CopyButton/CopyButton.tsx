@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import "./CopyButtonStyle.css";
 import { CopyIcon, HeartIcon } from "../../assets/icons";
+import { useTranslation } from "react-i18next";
 interface CopyButtonProps {
   children: React.ReactNode;
   className?: string;
@@ -14,7 +15,7 @@ const CopyButton: React.FC<CopyButtonProps> = ({
   onClick
 }) => {
   const [isCopied, setIsCopied] = useState(false);
-
+  const { t } = useTranslation('translations');
   useEffect(() => {
     if (isCopied) {
       const timer = setTimeout(() => {
@@ -54,7 +55,7 @@ const CopyButton: React.FC<CopyButtonProps> = ({
         >
           {isCopied ? <HeartIcon className="size-4" /> : <CopyIcon className="size-4" />}
           <span className="relative z-10 text-sm">
-            {isCopied ? 'Email Already Copied!' : children}
+            {isCopied ? t('msg.emailCopied') : children}
           </span>
         </motion.div>
       </AnimatePresence>

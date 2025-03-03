@@ -20,5 +20,8 @@
     },
     "button":{
         "connect":"Let's Connect"
+    },
+    "msg":{
+        "emailCopied":"Email Already Copied! :>"
     }
 }
