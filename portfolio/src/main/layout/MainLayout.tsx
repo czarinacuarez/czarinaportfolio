@@ -6,7 +6,7 @@ import NavigationBar from '../../component/NavigationBar/NavigationBar'
 const MainLayout = () => {
   return (
     <div className="min-h-screen">
-      <header className="p-4 text-center">
+      <header>
         <NavigationBar />
       </header>
       <main>

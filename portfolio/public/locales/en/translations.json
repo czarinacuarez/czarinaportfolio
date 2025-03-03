@@ -5,5 +5,12 @@
         "experience":"Experience",
         "projects":"Projects",
         "resume":"Resume"
+    },
+      "navDef": {
+        "home": "Step into my digital wonderland!",
+        "about": "Let's get to know each other better~",
+        "experience": "A peek into my professional adventures!",
+        "projects": "Take a look at what I've crafted with love~",
+        "resume": "My story on paper, but make it sparkly!"
     }
 }

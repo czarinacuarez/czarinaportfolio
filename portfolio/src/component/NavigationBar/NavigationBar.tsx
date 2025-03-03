@@ -3,7 +3,54 @@ import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useRef, useState } from "react";
 import { useActiveSection } from "../../hooks/useActiveSection";
 import { useTranslation } from 'react-i18next';
+import logo from '../../assets/logo/logo.webp';
+import type { Variants } from "motion/react"
+import { AboutIcon, ExperienceIcon, HomeIcon, ProjectsIcon, ResumeIcon } from '../../assets/icons';
 
+const navItems = ['home', 'about', 'experience', 'projects'] as const;
+
+interface PathProps {
+  d?: string
+  variants: Variants
+  transition?: { duration: number }
+}
+
+const Path = (props: PathProps) => (
+  <motion.path
+    fill="transparent"
+    strokeWidth="3"
+    stroke="hsl(350, 58%, 71%)"
+    strokeLinecap="round"
+    {...props}
+  />
+)
+
+const MenuToggle = ({ toggle }: { toggle: () => void }) => (
+  <button className="toggle" onClick={toggle}>
+    <svg width="20" height="20" viewBox="0 0 23 23">
+      <Path
+        variants={{
+          closed: { d: "M 2 2.5 L 20 2.5" },
+          open: { d: "M 3 16.5 L 17 2.5" },
+        }}
+      />
+      <Path
+        d="M 2 9.423 L 20 9.423"
+        variants={{
+          closed: { opacity: 1 },
+          open: { opacity: 0 },
+        }}
+        transition={{ duration: 0.1 }}
+      />
+      <Path
+        variants={{
+          closed: { d: "M 2 16.346 L 20 16.346" },
+          open: { d: "M 3 2.5 L 17 16.346" },
+        }}
+      />
+    </svg>
+  </button>
+)
 
 const NavigationBar = () => {
   const [isHidden, setIsHidden] = useState(false);
@@ -11,6 +58,7 @@ const NavigationBar = () => {
   const lastYRef = useRef(0);
   const { t } = useTranslation('translations');
   const activeSection = useActiveSection();
+  const [isOpen, setIsOpen] = useState(false)
 
   useMotionValueEvent(scrollY, "change", (y) => {
     const difference = y - lastYRef.current;
@@ -29,53 +77,136 @@ const NavigationBar = () => {
     }
   };
 
+  interface NavButtonProps {
+    section: string;
+    icon: React.ReactNode;
+    onClick: () => void;
+    isActive: boolean;
+  }
+
+
+  const NavButton = ({ section, icon, onClick, isActive }: NavButtonProps) => (
+    <button onClick={onClick}>
+      <div className={`flex gap-2 align-center rounded-2xl p-2 ${isActive ? 'cutesy-gradient default-shadow *:text-rose-400' : '*:text-rose-300'
+        }`}>
+        <div className={`${isActive ? 'bg-white' : 'bg-rose-50'} p-3 rounded-xl`}>
+          {icon}
+        </div>
+        <div className='flex-col flex justify-center items-start'>
+          <span className='text-sm'>{t(`titles.${section}`)}</span>
+          <span className='text-xs'>{t(`navDef.${section}`)}</span>
+        </div>
+      </div>
+    </button>
+  );
+
+  const getIcon = (section: string) => {
+    const icons = {
+      home: <HomeIcon className='size-6' />,
+      about: <AboutIcon className='size-6' />,
+      experience: <ExperienceIcon className='size-6' />,
+      projects: <ProjectsIcon className='size-6' />,
+      resume: <ResumeIcon className='size-6' />
+    };
+    return icons[section as keyof typeof icons];
+  };
   return (
-    <motion.div
-      animate={isHidden ? "hidden" : "visible"}
-      whileHover="visible"
-      onFocusCapture={() => setIsHidden(false)}
-      aria-hidden={isHidden}
-      variants={{
-        hidden: {
-          y: "-90%",
-        },
-        visible: {
-          y: "0%",
-        },
-      }}
-      transition={{ duration: 0.2 }}
-      className="fixed top-0 z-10 hidden md:flex pt-2 w-full  justify-center"
-    >
-      <nav className="hidden md:flex justify-between gap-3 rounded-3xl bg-white p-3 *:rounded-xl *:border *:border-gray-200 *:px-7 *:py-2 *:transition-colors *:duration-300 *:hover:bg-gray-200 *:focus-visible:bg-gray-200">
-        <button
-          onClick={() => scrollToSection('home')}
-          className={`${activeSection === 'home' ? 'bg-gray-200' : ''}`}
-          aria-current={activeSection === 'home' ? 'page' : undefined}>
-          {t('titles.home')}
-        </button>
-        <button
-          onClick={() => scrollToSection('about')}
-          className={`${activeSection === 'about' ? 'bg-gray-200' : ''}`}
-          aria-current={activeSection === 'about' ? 'page' : undefined}>
-          {t('titles.about')}
-        </button>
-        <button
-          onClick={() => scrollToSection('experience')}
-          className={`${activeSection === 'experience' ? 'bg-gray-200' : ''}`}
-          aria-current={activeSection === 'experience' ? 'page' : undefined}>
-          {t('titles.experience')}
-        </button>
-        <button
-          onClick={() => scrollToSection('projects')}
-          className={`${activeSection === 'projects' ? 'bg-gray-200' : ''}`}
-          aria-current={activeSection === 'projects' ? 'page' : undefined}>
-          {t('titles.projects')}
-        </button>
-        <a href="/resume.pdf" className="bg-gray-200">
-          {t('titles.resume')}
-        </a>
-      </nav>
-    </motion.div>
+    <div>
+      <div className='fixed w-full top-0 z-10 flex p-2 justify-between items-center bg-transparent'>
+        <img src={logo} className='size-16'></img>
+        <motion.nav
+          className=' md:hidden px-3'
+          initial={false}
+          animate={isOpen ? "open" : "closed"}
+        >
+          <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+        </motion.nav>
+        {/* Add the mobile menu animation */}
+      </div> <motion.div
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        variants={{
+          open: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+              type: "tween", // changed from spring to tween for smoother fade
+              duration: 0.3,
+              ease: "easeOut"
+            }
+          },
+          closed: {
+            opacity: 0,
+            scale: 0.95,
+            transition: {
+              type: "tween",
+              duration: 0.2,
+              ease: "easeIn"
+            }
+          }
+        }}
+        className="fixed  md:hidden  left-0 right-0 top-[80px] mx-auto w-[90%] max-w-[800px] lg:hidden"
+      >
+        <nav className={`flex flex-col gap-2 main-nav justify-between  *:text-left  rounded-3xl p-3 *:rounded-default *:py-2 *:transition-colors *:duration-300 *:hover:active *:focus-visible:active ${activeSection === 'home' ? 'home-shadow' : 'default-shadow'}`}>
+          {navItems.map((item) => (
+            <NavButton
+              key={item}
+              section={item}
+              icon={getIcon(item)}
+              onClick={() => scrollToSection(item)}
+              isActive={activeSection === item}
+            />
+          ))}
+
+          <button >
+            <div className='flex gap-2 align-center rounded-2xl p-2 *:text-rose-300'>
+              <div className='bg-rose-50 p-3 rounded-xl'>
+                <ResumeIcon className='size-6' />
+              </div>
+              <div className='flex-col flex justify-center items-start '>
+                <span className='text-sm'>{t('titles.resume')}</span>
+                <span className='text-xs'>{t('navDef.resume')}</span>
+              </div>
+            </div>
+          </button>
+        </nav>
+      </motion.div>
+      <motion.div
+        animate={isHidden ? "hidden" : "visible"}
+        whileHover="visible"
+        onFocusCapture={() => setIsHidden(false)}
+        aria-hidden={isHidden}
+        variants={{
+          hidden: {
+            y: "-90%",
+          },
+          visible: {
+            y: "0%",
+          },
+        }}
+        transition={{ duration: 0.2 }}
+        className="fixed top-0 z-10 hidden md:flex pt-2 w-full  justify-center"
+      >
+        <nav className={`hidden md:flex main-nav justify-between gap-2 rounded-3xl p-3 *:rounded-default *:py-2 *:transition-colors *:duration-300 *:hover:active *:focus-visible:active ${activeSection === 'home' ? 'home-shadow' : 'default-shadow'}`}>
+          {navItems.map((item) => (
+            <button
+              key={item}
+              onClick={() => scrollToSection(item)}
+              className={`${activeSection === item ? `active ${item === 'home' ? 'home-shadow' : 'default-shadow'}` : ''}`}
+              aria-current={activeSection === item ? 'page' : undefined}
+            >
+              {t(`titles.${item}`)}
+            </button>
+          ))}
+          <a
+            href="/resume.pdf"
+            className={activeSection === 'home' ? 'home-shadow' : 'default-shadow'}
+          >
+            {t('titles.resume')}
+          </a>
+        </nav>
+      </motion.div>
+    </div>
   );
 };
 
