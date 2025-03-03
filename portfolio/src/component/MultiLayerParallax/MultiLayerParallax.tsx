@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "motion/react";
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import sparkling from '../../assets/img/sparkling.webp';
 import ShinyButton from "../ShinyButton/ShinyButton";
 import CopyButton from "../CopyButton/CopyButton";
@@ -9,6 +9,17 @@ export default function MultiLayerParallax() {
   const ref = useRef(null);
   const cloudsRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation('translations');
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const handleChange = () => setPrefersReducedMotion(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start start', 'end start']
@@ -18,6 +29,7 @@ export default function MultiLayerParallax() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
 
   useEffect(() => {
+    if (prefersReducedMotion) return;
     const updateCloudsZIndex = () => {
       if (!cloudsRef.current) return;
       if (scrollYProgress.get() < 0.1) {
@@ -28,7 +40,7 @@ export default function MultiLayerParallax() {
     };
     const unsubscribe = scrollYProgress.on('change', updateCloudsZIndex);
     return () => unsubscribe();
-  }, [scrollYProgress]);
+  }, [scrollYProgress, prefersReducedMotion]);
 
 
   return (
@@ -66,7 +78,9 @@ export default function MultiLayerParallax() {
 
       <motion.div
         style={{ y: backgroundY }}
-        className="absolute inset-0  -top-[50vh] z-0 background-parallax">
+        className="absolute inset-0  -top-[50vh] z-0 background-parallax"
+        aria-hidden="true" /* Background decorative element, not functional content */
+      >
       </motion.div>
       <motion.div
         ref={cloudsRef}
@@ -79,6 +93,7 @@ export default function MultiLayerParallax() {
           repeat: Infinity,
         }}
         className="absolute inset-0 clouds-parallax "
+        aria-hidden="true" /* Decorative animation element */
       />
     </div >
   )

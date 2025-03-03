@@ -15,10 +15,7 @@ const ShinyButton: React.FC<ShinyButtonProps> = ({
   return (
     <motion.button
       onClick={onClick}
-      className={` shiny-button
-         cursor-pointer
-        ${className}
-      `}
+      className={`shiny-button cursor-pointer ${className}`}
       whileHover={{
         scale: 1.05,
         transition: {
@@ -40,9 +37,9 @@ const ShinyButton: React.FC<ShinyButtonProps> = ({
         ease: [0.42, 0, 0.58, 1]
       }}
     >
-      <motion.span className="relative z-10">
+      <span className="relative z-10">
         {children}
-      </motion.span>
+      </span>
     </motion.button>
   );
 };

@@ -180,6 +180,9 @@ const NavigationBar = () => {
           </a>
         </nav>
       </motion.div>
+
+      {/* Container for future desktop-only navigation elements */}
+
       <div className='fixed hidden p-2 w-full top-0 z-50 lg:flex '>
       </div>
       <motion.div

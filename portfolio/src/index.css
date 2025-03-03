@@ -36,6 +36,11 @@
   -webkit-box-shadow: 0px 4px 42.2px var(--color-rose-400);
 }
 
+/* Standard scrollbar properties (future-proofing) */
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   .home-shadow {
     box-shadow: 0 4px 30px white;
@@ -117,8 +122,7 @@
   }
 }
 
-#home {
-}
+/* Home section styling handled by component styles */
 
 .background-parallax {
   background-image: url("./assets/img/pinkclouds.webp");
@@ -130,4 +134,11 @@
   background-image: url("./assets/img/clouds.webp");
   background-position: bottom;
   background-size: cover;
+}
+
+#about {
+  .me-image {
+    width: fit-content;
+    max-height: 800px;
+  }
 }
