@@ -1,0 +1,85 @@
+import { motion, useScroll, useTransform } from "motion/react";
+import React, { useEffect, useRef } from 'react';
+import sparkling from '../../assets/img/sparkling.webp';
+import ShinyButton from "../ShinyButton/ShinyButton";
+import CopyButton from "../CopyButton/CopyButton";
+import { useTranslation } from "react-i18next";
+
+export default function MultiLayerParallax() {
+  const ref = useRef(null);
+  const cloudsRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation('translations');
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start']
+  })
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
+
+  useEffect(() => {
+    const updateCloudsZIndex = () => {
+      if (!cloudsRef.current) return;
+      if (scrollYProgress.get() < 0.1) {
+        cloudsRef.current.style.zIndex = '0';
+      } else {
+        cloudsRef.current.style.zIndex = '20';
+      }
+    };
+    const unsubscribe = scrollYProgress.on('change', updateCloudsZIndex);
+    return () => unsubscribe();
+  }, [scrollYProgress]);
+
+
+  return (
+    <div
+      ref={ref}
+      className="w-full h-screen overflow-hidden relative grid place-items-center">
+
+
+      <motion.div style={{ y: textY }} className="relative flex items-center justify-center z-10 mb-10">
+        <motion.img
+          src={sparkling}
+          alt=""
+          className="absolute top-5 z-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          animate={{
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
+        />
+        <motion.div className="*:text-center *:text-white *:font-bold text-center">
+          <motion.h1 className="font-bold coquette-title  text-7xl md:text-8xl relative z-2 ">
+            {t('details.wholeName')}
+          </motion.h1>
+          <motion.h3 className="uppercase coquette-description my-4 md:my-2 text-2xl z-5">{t('details.position')}</motion.h3>
+          <div className="flex md:flex-row *:font-straight flex-col w-fit m-auto gap-4 md:gap-5 my-4 justify-center">
+            <ShinyButton className="z-5">{t('button.connect')}</ShinyButton>
+            <CopyButton className="z-5">{t('details.emailAdd')}</CopyButton>
+          </div>
+        </motion.div>
+
+      </motion.div>
+
+      <motion.div
+        style={{ y: backgroundY }}
+        className="absolute inset-0  -top-[50vh] z-0 background-parallax">
+      </motion.div>
+      <motion.div
+        ref={cloudsRef}
+        animate={{
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 5,
+          ease: "easeInOut",
+          repeat: Infinity,
+        }}
+        className="absolute inset-0 clouds-parallax "
+      />
+    </div >
+  )
+}

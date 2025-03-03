@@ -11,7 +11,7 @@ import ExperienceSection from './components/ExperienceSection';
 const MainPage = () => {
   return (
     <div>
-      <section id="home" className="min-h-screen">
+      <section id="home">
         <HomeSection />
       </section>
 
