@@ -27,10 +27,12 @@
 
   .home-shadow {
     box-shadow: 0 4px 30px white;
+    transition: ease-in 2s;
   }
 
   .default-shadow {
     box-shadow: 0 4px 30px var(--color-rose-100);
+    transition: ease-in 2s;
   }
 
   .cutesy-gradient {
