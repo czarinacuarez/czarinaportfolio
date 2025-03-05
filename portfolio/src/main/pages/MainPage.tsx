@@ -19,7 +19,7 @@ const MainPage = () => {
         <AboutSection />
       </section>
 
-      <section id="experience" className="min-h-screen">
+      <section id="experience">
         <ExperienceSection />
       </section>
 

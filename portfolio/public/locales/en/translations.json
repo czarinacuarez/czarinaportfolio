@@ -23,5 +23,48 @@
     },
     "msg":{
         "emailCopied":"Email Already Copied! :>"
-    }
+    },
+  "expCategory": {
+    "categories": [
+      {
+        "title": "Education",
+        "icon": "AcademicCapIcon",
+        "items": [
+          {
+            "role": "BS Information Technology with Specialization in Mobile and Internet Technologies",
+            "institution": "NU Fairview",
+            "date": "Aug 2021 - Present",
+            "description": "Consistent Blue Scholarship Student"
+          }
+        ]
+      },
+      {
+        "title": "Extra - Curriculars",
+        "icon": "ExtraCurricularsIcon",
+        "items": [
+          {
+            "role": "AWS re/Start Program Graduate",
+            "institution": "Amazon Web Services",
+            "date": "July 2024 - Oct 2024"
+          },
+          {
+            "role": "Google Developers Student Club Lead",
+            "institution": "Google Developers",
+            "date": "Aug 2023 - July 2024"
+          }
+        ]
+      },
+      {
+        "title": "Work",
+        "icon": "WorkIcon",
+        "items": [
+          {
+            "role": "Software Developer Intern",
+            "institution": "JLabs Innovatech Inc.",
+            "date": "Dec 2024 - Feb 2025"
+          }
+        ]
+      }
+    ]
+  }
 }

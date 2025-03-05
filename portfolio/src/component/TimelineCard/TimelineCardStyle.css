@@ -1,0 +1,5 @@
+.timeline-container {
+    border: solid 1px var(--color-rose-400);
+    border-radius: 20px;
+    padding: 10px;
+}

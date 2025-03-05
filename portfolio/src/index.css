@@ -17,6 +17,9 @@
   --color-rose-500: #d46679;
 
   /** SIZES **/
+
+  /** BORDER RADIUS **/
+  --radius-default: 20px;
 }
 
 ::-webkit-scrollbar {
