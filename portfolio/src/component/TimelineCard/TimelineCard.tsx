@@ -23,7 +23,7 @@ function TimelineCard({ category }: TimelineCardProps) {
       }}
     >
       <div className='flex items-center gap-2 p-2'>
-        <div className='w-5 h-5 text-rose-400 group-hover:text-rose-500 transition-colors'>
+        <div className='w-5 h-5 text-rose-400 group-hover:text-rose-500 transition-colors' aria-hidden="true">
           {IconComponent && <IconComponent />}
         </div>
         <span className='title uppercase font-bold font-black text-lg group-hover:text-rose-500 transition-colors'>

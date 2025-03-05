@@ -6,7 +6,7 @@ interface PinkOutlineContainerProps {
 
 function PinkOutlineContainer({ item }: PinkOutlineContainerProps) {
   return (
-    <div className='px-2 border-1 border-rose-400 border rounded-default'>
+    <div className='px-2 border border-rose-400 rounded-default' aria-label={`${item} indicator`}>
       <span className='text-xs'>{item}</span>
     </div>
   );

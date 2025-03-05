@@ -28,30 +28,34 @@ const AboutSection = () => {
             —drives me to continuously learn and grow in this exciting field.
           </p>
           <div className='flex gap-3'>
-            <GithubIcon className='size-6'></GithubIcon>
-            <LinkedinIcon className='size-6'></LinkedinIcon>
+            <a href="https://github.com/czarinacuarez" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <GithubIcon className='size-6' />
+            </a>
+            <a href="https://linkedin.com/in/czarinacuarez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <LinkedinIcon className='size-6' />
+            </a>
           </div>
         </div>
       </div>
       <div className="min-h-screen flex flex-col items-center justify-center px-8">
-        <img src={butterflyRibbon}></img>
-        <p className="font-straight text-sm uppercase font-bold my-4 text-center">CURRENTLY, I’M WORKING WITH THES E TOOLS TO improve in my</p>
+        <img src={butterflyRibbon} alt="Butterfly Ribbon Decoration" />
+        <p className="font-straight text-sm uppercase font-bold my-4 text-center">CURRENTLY, I’M WORKING WITH THESE TOOLS TO improve in my</p>
         <h2 className="text-5xl text-rose-300 coquette-font font-bold">
           Tech Stack
         </h2>
-        <div className=''>
+        <div>
           <div className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-2 text-lg text-gray-800 lg:gap-4">
             <OutlineButton>JavaScript</OutlineButton>
             <OutlineButton>TypeScript</OutlineButton>
             <OutlineButton>React</OutlineButton>
-            <OutlineButton>TypeScript</OutlineButton>
-            <OutlineButton>TypeScript</OutlineButton>
-            <OutlineButton>TypeScript</OutlineButton>
-            <OutlineButton>TypeScript</OutlineButton>
-            <OutlineButton>TypeScript</OutlineButton>
-            <OutlineButton>TypeScript</OutlineButton>
-            <OutlineButton>TypeScript</OutlineButton>
-            <OutlineButton>TypeScript</OutlineButton>
+            <OutlineButton>HTML5</OutlineButton>
+            <OutlineButton>CSS3</OutlineButton>
+            <OutlineButton>SASS/SCSS</OutlineButton>
+            <OutlineButton>Jest</OutlineButton>
+            <OutlineButton>Express.js</OutlineButton>
+            <OutlineButton>RESTful APIs</OutlineButton>
+            <OutlineButton>Webpack</OutlineButton>
+            <OutlineButton>npm</OutlineButton>
             <OutlineButton>Node.js</OutlineButton>
             <OutlineButton>TailwindCSS</OutlineButton>
             <OutlineButton>MongoDB</OutlineButton>

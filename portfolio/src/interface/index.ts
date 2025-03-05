@@ -8,5 +8,6 @@ export interface TimelineItem {
 export interface TimelineCategory {
   title: string;
   icon: string;
+  id?: string;
   items: TimelineItem[];
 }
