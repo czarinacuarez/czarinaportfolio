@@ -5,7 +5,7 @@ import { MainRouter } from './main/routes/MainRouter'
 function App() {
   return (
     <ActiveSectionProvider>
-          <MainRouter />
+      <MainRouter />
     </ActiveSectionProvider>
   )
 }

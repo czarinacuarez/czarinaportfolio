@@ -1,0 +1,54 @@
+.copy-button {
+    /* From https://css.glass */
+    background: var(--color-rose-200);
+    border-radius: 16px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 30px var(--color-rose-500);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    box-shadow: 0 4px 30px var(--color-rose-100);
+    font-weight: 600;
+
+    span {
+        text-shadow: 2px 2px 15px var(--color-rose-400);
+    }
+
+    &:hover {
+        background: white;
+        box-shadow: 0 4px 40px var(--color-rose-200);
+        border-color: var(--color-rose-100);
+        color: var(--color-rose-300);
+        span {
+            text-shadow: none;
+        }
+        transform: translateY(-2px);
+    }
+}
+
+.copied-button {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 30px var(--color-rose-100);
+    font-weight: 600;
+
+    span {
+        text-shadow: 2px 2px 15px var(--color-rose-400);
+    }
+
+    &:hover {
+        background: white;
+        box-shadow: 0 4px 40px var(--color-rose-200);
+        border-color: var(--color-rose-100);
+        color: var(--color-rose-300);
+        span {
+            text-shadow: none;
+        }
+        transform: translateY(-2px);
+    }
+}

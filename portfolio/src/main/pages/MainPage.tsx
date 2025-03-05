@@ -11,11 +11,11 @@ import ExperienceSection from './components/ExperienceSection';
 const MainPage = () => {
   return (
     <div>
-      <section id="home" className="min-h-screen">
+      <section id="home" className='relative'>
         <HomeSection />
       </section>
 
-      <section id="about" className="min-h-screen">
+      <section id="about" className='relative' >
         <AboutSection />
       </section>
 

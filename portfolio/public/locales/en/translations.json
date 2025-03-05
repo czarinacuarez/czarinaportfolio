@@ -12,5 +12,16 @@
         "experience": "A peek into my professional adventures!",
         "projects": "Take a look at what I've crafted with love~",
         "resume": "My story on paper, but make it sparkly!"
+    },
+    "details":{
+        "wholeName":"Czarina Cuarez",
+        "position":"Full Stack Developer",
+        "emailAdd":"czarinakrisel@gmail.com"
+    },
+    "button":{
+        "connect":"Let's Connect"
+    },
+    "msg":{
+        "emailCopied":"Email Already Copied! :>"
     }
 }

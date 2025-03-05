@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 import logo from '../../assets/logo/logo.webp';
 import type { Variants } from "motion/react"
 import { AboutIcon, ExperienceIcon, HomeIcon, ProjectsIcon, ResumeIcon } from '../../assets/icons';
-
 const navItems = ['home', 'about', 'experience', 'projects'] as const;
 
 interface PathProps {
@@ -117,17 +116,19 @@ const NavigationBar = () => {
   };
   return (
     <div>
-      <div className='fixed w-full top-0 z-10 flex p-2 justify-between items-center bg-transparent'>
-        <img src={logo} className='size-16' alt="Portfolio Logo"></img>
+
+      <div className='fixed md:hidden  w-full top-0 z-50 flex p-2 justify-between items-center bg-transparent'>
+        <img src={logo} className='size-16 ' alt="Portfolio Logo"></img>
         <motion.nav
-          className=' md:hidden px-3'
+          className=' px-3'
           initial={false}
           animate={isOpen ? "open" : "closed"}
         >
           <MenuToggle toggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
         </motion.nav>
         {/* Add the mobile menu animation */}
-      </div> <motion.div
+      </div>
+      <motion.div
         initial={false}
         animate={isOpen ? "open" : "closed"}
         variants={{
@@ -135,7 +136,7 @@ const NavigationBar = () => {
             opacity: 1,
             scale: 1,
             transition: {
-              type: "tween", // changed from spring to tween for smoother fade
+              type: "tween",
               duration: 0.3,
               ease: "easeOut"
             }
@@ -150,7 +151,7 @@ const NavigationBar = () => {
             }
           }
         }}
-        className="fixed  md:hidden  left-0 right-0 top-[80px] mx-auto w-[90%] max-w-[800px] lg:hidden"
+        className="fixed  md:hidden  z-50 left-0 right-0 top-[80px] mx-auto w-[90%] max-w-[800px] lg:hidden"
         id="mobile-menu" role="menu"
       >
         <nav className={`flex flex-col gap-2 main-nav justify-between  *:text-left  rounded-3xl p-3
@@ -179,6 +180,11 @@ const NavigationBar = () => {
           </a>
         </nav>
       </motion.div>
+
+      {/* Container for future desktop-only navigation elements */}
+
+      <div className='fixed hidden p-2 w-full top-0 z-50 lg:flex '>
+      </div>
       <motion.div
         animate={isHidden ? "hidden" : "visible"}
         whileHover="visible"
@@ -193,8 +199,9 @@ const NavigationBar = () => {
           },
         }}
         transition={{ duration: 0.2 }}
-        className="fixed top-0 z-10 hidden md:flex pt-2 w-full  justify-center"
+        className="fixed top-0 hidden  z-50  md:flex pt-2 w-full  justify-center"
       >
+        <img src={logo} className='size-16  ' alt="Portfolio Logo"></img>
         <nav className={`hidden md:flex main-nav justify-between gap-2 rounded-3xl p-3 *:rounded-default *:py-2 *:transition-colors *:duration-300 *:hover:active *:focus-visible:active ${activeSection === 'home' ? 'home-shadow' : 'default-shadow'}`}>
           {navItems.map((item) => (
             <button
