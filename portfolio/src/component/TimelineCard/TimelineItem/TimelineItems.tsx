@@ -31,7 +31,7 @@ function TimelineItems({ items }: TimelineItemProps) {
               />
             ) : (
               <motion.div
-                className='absolute left-0 top-0 w-4 h-4 rounded-full border-2 border-rose-200 bg-white group-hover:border-rose-400 group-hover:bg-rose-50 transition-colors'
+                className='absolute left-0 top-0 w-4 h-4 rounded-full border-2 border-rose-200 bg-white group-hover:border-rose-400 group-hover:bg-rose-400 transition-colors'
                 whileHover={{ scale: 1.2 }}
                 transition={{ duration: 0.2 }}
               />
