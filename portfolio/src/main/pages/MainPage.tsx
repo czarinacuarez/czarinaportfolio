@@ -27,16 +27,16 @@ const MainPage = () => {
         <ProjectsSection />
       </section>
 
-      <section id="achievement" className="min-h-screen">
+      <section id="achievement" className="min-h-screen flex justify-center items-center">
         <AchievementsSection />
       </section>
 
-      <section id="contact" className="min-h-screen">
+      <section id="contact" className="min-h-screen flex justify-center items-center">
         <ContactSection />
       </section>
 
 
-      <section id="footer" className="min-h-screen">
+      <section id="footer" className="min-h-screen flex justify-center items-center">
         <FooterSection />
       </section>
     </div>

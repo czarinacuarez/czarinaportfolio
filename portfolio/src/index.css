@@ -54,6 +54,11 @@ html {
     transition: ease-in 2s;
   }
 
+  .big-shadow {
+    box-shadow: 0 4px 30px var(--color-rose-400);
+    transition: ease-in 2s;
+  }
+
   .cutesy-gradient {
     background-image: linear-gradient(var(--color-rose-100), white);
   }
@@ -63,16 +68,31 @@ html {
     font-family: var(--font-cursive);
   }
 
+  .gradient-text {
+    background: linear-gradient(90deg, #f1c7ce 0%, #e08b99 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .coquette-title {
     font-style: italic;
     font-family: var(--font-cursive);
     text-shadow: 0px 4px 42.2px var(--color-rose-500);
+
+    &.darker {
+      text-shadow: 0px 0px 30px var(--color-rose-500);
+    }
   }
 
   .coquette-description {
     font-style: normal;
     font-family: var(--font-straight);
     text-shadow: 0px 4px 42.2px var(--color-rose-500);
+
+    &.darker {
+      text-shadow: 2px 2px 25px var(--color-rose-500);
+    }
   }
 
   nav {
@@ -143,4 +163,18 @@ html {
     width: fit-content;
     max-height: 800px;
   }
+}
+
+#contact {
+  .contact-container {
+    background-image: url("./assets/img/pinkNoClouds.webp");
+    background-position: bottom;
+    background-size: cover;
+  }
+}
+
+.divider {
+  background: linear-gradient(90deg, #ffffff 0%, #e6a6b1 50%, #ffffff 100%);
+  height: 1px;
+  width: 100%;
 }

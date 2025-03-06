@@ -2,6 +2,7 @@ import React from 'react';
 import TimelineCard from '../../../component/TimelineCard/TimelineCard';
 import { useTranslation } from 'react-i18next';
 import { TimelineCategory } from '../../../interface';
+import rabbitHeart from '../../../assets/icons/rabbitheart.svg';
 
 interface ExpCategoryTranslation {
   categories: TimelineCategory[];
@@ -29,6 +30,7 @@ const ExperienceSection = () => {
               category={category}
             />
           ))}
+          <img src={rabbitHeart} className='items-center m-auto my-2 md:my-0' />
         </div>
       </div>
     </section>

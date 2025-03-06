@@ -11,6 +11,9 @@ import LinkedinIcon from "./LinkedinIcon";
 import AcademicCapIcon from "./AcademicCapIcon";
 import ExtraCurricularsIcon from "./ExtraCurricularsIcon";
 import WorkIcon from "./WorkIcon";
+import LocationIcon from "./LocationIcon";
+import MailIcon from "./MailIcon";
+import PhoneIcon from "./PhoneIcon";
 export {
   AcademicCapIcon,
   ExtraCurricularsIcon,
@@ -25,4 +28,7 @@ export {
   HeartIcon,
   GithubIcon,
   LinkedinIcon,
+  LocationIcon,
+  MailIcon,
+  PhoneIcon,
 };

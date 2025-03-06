@@ -66,5 +66,68 @@
         ]
       }
     ]
+  },
+  "projCategory":{
+    "projects":[{
+    "id":0,
+    "title": "MuzonEcoSave Reverse Vending Machine (RVM)",
+    "description": "Description for Project 1",
+    "items": ["lalala", "lalala", "lalala", "lalala"],
+    "tech": ["javascript", "typescript", "react", "html5", "css3"],
+    "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+    },
+    {
+    "id":1,
+    "title": "MuzonEcoSave Reverse Vending Machine (RVM) 2",
+    "description": "Description for Project 1",
+    "items": ["lalala", "lalala", "lalala", "lalala"],
+    "tech": ["javascript", "typescript", "react", "html5", "css3"],
+    "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+    },
+    {
+    "id":2,
+    "title": "MuzonEcoSave Reverse Vending Machine (RVM) 3",
+    "description": "Description for Project 1",
+    "items": ["lalala", "lalala", "lalala", "lalala"],
+    "tech": ["javascript", "typescript", "react", "html5", "css3"],
+    "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+    }
+    ]
+  },
+  "achieveCategory":{
+      "items": [
+        {
+          "title": "FIRST PLACER & MOST INNOVATIVE PROJECT",
+          "type": "Ideathon",
+          "description": "<b>QCEcoSave: Reverse Vending Machine</b>, our idea entry, competed with schools across Quezon City and secured an award in <b>Reinventing Cities: Design for Smart and Sustainable Cities</b> at <b>DOST-NCR</b>.",
+          "date": "July 2024 - Oct 2024",
+          "placeholder": "secondPattern",
+          "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+        },
+        {
+          "title": "CHAMPION",
+          "type": "Hackathon",
+        "description": "Our entry, <b>Sibol: An AI-Powered Planting Application</b>, won the championship in <b>InnOlympics 2024: GDSC-PLM Hackathon</b>, competing against <b>30+ schools</b> from various cities.",
+          "date": "July 2024 - Oct 2024",
+          "placeholder": "firstPattern",
+          "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+        },
+         {
+          "title": "ACP Cloud Security",
+          "type": "Certification",
+        "description": "<b>Alibaba Cloud's Cloud Security Certification (ACP Level - Alibaba Cloud Certified Professional)</b> is a professional technical certification oriented to <b>architects, developers, and O&M personnel</b> that use Alibaba Cloud products.",
+          "date": "July 2024 - Oct 2024",
+          "placeholder": "firstPattern",
+          "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+        },
+         {
+          "title": "ACA Cloud Computing",
+          "type": "Certification",
+        "description": "<b>Alibaba Cloud Certification Associate (ACA - Alibaba Cloud Certification Associate)</b> is a certification designed for those who can use <b>Alibaba Cloud Computing</b> products.",
+          "date": "July 2024 - Oct 2024",
+          "placeholder": "secondPattern",
+          "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+        }
+      ]
   }
 }
