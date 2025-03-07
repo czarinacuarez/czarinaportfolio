@@ -3,8 +3,10 @@ import me from "../../../assets/img/me.webp"
 import { GithubIcon, LinkedinIcon } from '../../../assets/icons';
 import OutlineButton from '../../../component/OutlineButton/OutlineButton';
 import butterflyRibbon from "../../../assets/icons/butterflyRibbon.svg";
+import { useTranslation } from 'react-i18next';
 
 const AboutSection = () => {
+  const { t } = useTranslation("translations");
   return (
     <div>
       <div className="min-h-screen flex flex-col gap-2 md:gap-5 md:flex-row items-center justify-center px-4 md:px-8">
@@ -12,26 +14,26 @@ const AboutSection = () => {
           <img src={me} className='me-image w-full' alt="Czarina Cuarez" />
         </div>
         <div className="w-full md:w-1/2 max-w-xl space-y-4 text-start px-4 md:px-0">
-          <p className="font-straight text-sm uppercase font-bold text-rose-300">ABOUT ME</p>
-          <h2 className="text-5xl font-normal font-straight">Hi, Im
-            <span className="text-rose-300 coquette-font font-bold"> Czarina Cuarez</span>
+          <p className="font-straight text-sm uppercase font-bold text-rose-300">{t("details.title")}</p>
+          <h2 className="text-5xl font-normal font-straight">{t('intro.greets')}
+            <span className="text-rose-300 coquette-font font-bold">{t('details.wholeName')}</span>
           </h2>
           <p className=" text-base">
-            I am an aspiring
-            <span className='coquette-font font-bold text-rose-300 text-xl'> full-stack developer </span>
-            who currently sets her new foot unto the workplace.
-
+            {t('intro.intro')}
+            <span className='coquette-font font-bold text-rose-300 text-xl'> {t('intro.role')}</span>
+            {t('intro.workplace')}
             <br></br><br></br>
-            My passion for software development—and
-            <span className='coquette-font font-bold text-rose-300 text-xl'> a love for
-              all things pink </span>
-            —drives me to continuously learn and grow in this exciting field.
+            {t('intro.passion')}
+            <span className='coquette-font font-bold text-rose-300 text-xl'> {t('intro.personality')} </span>
+            {t('intro.growth')}
+            <br></br><br></br>
+            {t('intro.now')}
           </p>
           <div className='flex gap-3'>
-            <a href="https://github.com/czarinacuarez" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+            <a href={t('details.socials.github')} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
               <GithubIcon className='size-6' />
             </a>
-            <a href="https://linkedin.com/in/czarinacuarez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+            <a href={t('details.socials.linkedin')} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
               <LinkedinIcon className='size-6' />
             </a>
           </div>
@@ -39,27 +41,22 @@ const AboutSection = () => {
       </div>
       <div className="min-h-screen flex flex-col items-center justify-center px-8">
         <img src={butterflyRibbon} alt="Butterfly Ribbon Decoration" />
-        <p className="font-straight text-sm uppercase font-bold my-4 text-center">CURRENTLY, I’M WORKING WITH THESE TOOLS TO improve in my</p>
+        <p className="font-straight text-sm uppercase font-bold my-4 text-center">{t('techCategory.description')}</p>
         <h2 className="text-5xl text-rose-300 coquette-font font-bold">
-          Tech Stack
+          {t('titles.techStack')}
         </h2>
         <div>
           <div className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-2 text-lg text-gray-800 lg:gap-4">
-            <OutlineButton>JavaScript</OutlineButton>
-            <OutlineButton>TypeScript</OutlineButton>
-            <OutlineButton>React</OutlineButton>
-            <OutlineButton>HTML5</OutlineButton>
-            <OutlineButton>CSS3</OutlineButton>
-            <OutlineButton>SASS/SCSS</OutlineButton>
-            <OutlineButton>Jest</OutlineButton>
-            <OutlineButton>Express.js</OutlineButton>
-            <OutlineButton>RESTful APIs</OutlineButton>
-            <OutlineButton>Webpack</OutlineButton>
-            <OutlineButton>npm</OutlineButton>
-            <OutlineButton>Node.js</OutlineButton>
-            <OutlineButton>TailwindCSS</OutlineButton>
-            <OutlineButton>MongoDB</OutlineButton>
-            <OutlineButton>Git</OutlineButton>
+            {(t('techCategory.items', { returnObjects: true }) as Array<{ name: string, icon: string }>).map((tech) => (
+              <OutlineButton key={tech.name} >
+                <img
+                  src={`/src/assets/techStack/${tech.icon}`}
+                  alt={tech.name}
+                  className="w-5 h-5 mr-2 inline-block transition-all"
+                />
+                {tech.name}
+              </OutlineButton>
+            ))}
           </div>
         </div>
       </div>

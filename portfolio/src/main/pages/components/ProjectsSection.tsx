@@ -28,9 +28,9 @@ const ProjectsSection = () => {
   return (
     <div className="container mx-auto px-4 md:pt-40 md:pb-20">
       <div className='md:mb-40 mb-10'>
-        <p className="font-straight text-rose-300 text-sm uppercase font-bold my-4 text-center">Beyond that, my passion for tech has driven me to accomplish these</p>
-        <h2 id="achievements-heading" className="text-5xl coquette-font font-bold text-center">
-          Achievements
+        <p className="font-straight  text-sm uppercase font-bold my-4 text-center">{t('projCategory.description')}</p>
+        <h2 id="achievements-heading" className="text-5xl text-rose-300 coquette-font font-bold text-center">
+          {t('titles.projects')}
         </h2>
       </div>
       {/* On mobile: Stack each image+description pair */}
@@ -117,13 +117,13 @@ const ProjectsSection = () => {
         </div>
 
         {/* Sticky description - desktop only */}
-        <div className="sticky top-40 h-fit">
+        <div className="sticky top-30 h-fit">
           <motion.div
             key={activeProject.id}
 
           >
             <div className={`
-              flex flex-col align-start px-10 pt-15
+              flex flex-col align-start px-10 pt-10
               h-full min-h-[500px]
               ${isLastProject ? 'justify-between' : ''}
             `}>
@@ -162,7 +162,7 @@ const ProjectsSection = () => {
       {/* {isLastProject && (
         <div className="text-center mt-20">
           <ShinyButton>
-            See more of my works
+            And More
           </ShinyButton>
         </div>
       )} */}

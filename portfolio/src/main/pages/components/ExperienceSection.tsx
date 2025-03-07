@@ -18,9 +18,9 @@ const ExperienceSection = () => {
 
   return (
     <section className='min-h-screen flex flex-col items-center justify-center px-8 md:px-0' aria-labelledby="experience-heading">
-      <p className="font-straight text-rose-300 text-sm uppercase font-bold my-4 text-center">Here’s what I’ve learned and accomplished over time in my</p>
+      <p className="font-straight text-rose-300 text-sm uppercase font-bold my-4 text-center">{t('expCategory.description')}</p>
       <h2 id="experience-heading" className="text-5xl coquette-font font-bold text-center">
-        Experience
+        {t('titles.experience')}
       </h2>
       <div className='flex justify-center items-center my-8'>
         <div className="grid gap-4 md:grid-cols-2 grid-cols-1">

@@ -18,9 +18,9 @@ const AchievementsSection = () => {
   const items = rawData?.items || [];
   return (
     <div className="flex flex-col justify-center items-center py-10">
-      <p className="font-straight text-rose-300 text-sm uppercase font-bold my-4 text-center">Beyond that, my passion for tech has driven me to accomplish these</p>
+      <p className="font-straight text-rose-300 text-sm uppercase font-bold my-4 text-center">{t('achieveCategory.description')}</p>
       <h2 id="achievements-heading" className="text-5xl coquette-font font-bold text-center">
-        Achievements
+        {t('titles.achievements')}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-20 max-w-xl w-80 md:w-full md:max-w-4xl">
         {items.map((item) => (

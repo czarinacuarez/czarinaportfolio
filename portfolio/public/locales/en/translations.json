@@ -1,8 +1,12 @@
 {
+  "portfolio": "Portfolio",
+  "getInTouch": "Get in touch",
     "titles":{
         "home":"Home",
         "about": "About",
         "experience":"Experience",
+        "achievements":"Achievements",
+        "techStack":"Tech Stack",
         "projects":"Projects",
         "resume":"Resume"
     },
@@ -13,10 +17,29 @@
         "projects": "Take a look at what I've crafted with love~",
         "resume": "My story on paper, but make it sparkly!"
     },
+    "intro": {
+    "greets": "Hi, I'm ",
+    "intro": "I am an aspiring",
+    "role": "full-stack developer ",
+    "workplace": "who currently sets her new foot unto the workplace.",
+    "passion": "My passion for software development—and",
+    "personality": "a love for all things pink",
+    "growth": "—drives me to continuously learn and grow in this exciting field.",
+    "now": "Now, I'm focusing on clean code principles and industry best practices to deliver exceptional software solutions."    },
     "details":{
+        "title":"About Me",
         "wholeName":"Czarina Cuarez",
+        "description": "Gracefully crafting full-stack solutions to elevate your company’s success.",
         "position":"Full Stack Developer",
-        "emailAdd":"czarinakrisel@gmail.com"
+        "emailAdd":"czarinakrisel@gmail.com",
+        "primLoc":"San Jose del Monte, Bulacan, Philippines",
+        "secLoc":"Metro Manila, Philippines",
+        "sigQuote":"Like a butterfly, her wings will remain forever unfolded",
+        "copyright": "Copyright © 2025 Czarina Cuarez. All rights reserved.",
+        "socials":{
+          "linkedin":"https://www.linkedin.com/in/czarina-krisel-cuarez-1a657721b/",
+          "github":"https://github.com/czarinacuarez"
+        }
     },
     "button":{
         "connect":"Let's Connect"
@@ -24,7 +47,36 @@
     "msg":{
         "emailCopied":"Email Already Copied! :>"
     },
+    "techCategory":{
+      "description":"Currently, I'm working with these tools to improve my",
+       "items": [
+        {"name": "JavaScript", "icon": "javascript.webp"},
+        {"name": "TypeScript", "icon": "typescript.webp"},
+        {"name": "PHP", "icon": "php.webp"},
+        {"name": "React", "icon": "react.webp"},
+        {"name": "Laravel", "icon": "laravel.webp"},
+        {"name": "HTML", "icon": "html.webp"},
+        {"name": "CSS", "icon": "css.webp"},
+        {"name": "SASS/SCSS", "icon": "sass.webp"},
+        {"name": "Postman", "icon": "postman.webp"},
+        {"name": "AWS", "icon": "aws.webp"},
+        {"name": "TailwindCSS", "icon": "tailwind.webp"},
+        {"name": "Bootstrap", "icon": "bootstrap.webp"},
+        {"name": "NodeJS", "icon": "nodejs.webp"},
+        {"name": "NestJS", "icon": "nestjs.webp"},
+        {"name": "Flutter", "icon": "flutter.webp"},
+        {"name": "Git", "icon": "git.webp"},
+        {"name": "Python", "icon": "python.webp"},
+        {"name": "Java", "icon": "java.webp"},
+        {"name": "Firebase", "icon": "firebase.webp"},
+        {"name": "PostgreSQL", "icon": "postgresql.webp"},
+        {"name": "MySQL", "icon": "mysql.webp"},
+        {"name": "VS Code", "icon": "vscode.webp"},
+        {"name": "Android Studio", "icon": "androidstudio.webp"}
+      ]
+    },
   "expCategory": {
+    "description":"Here’s what I’ve learned and accomplished over time in my",
     "categories": [
       {
         "title": "Education",
@@ -68,47 +120,62 @@
     ]
   },
   "projCategory":{
+    "description":"Over the years, I've built and contributed to multiple",
     "projects":[{
     "id":0,
     "title": "MuzonEcoSave Reverse Vending Machine (RVM)",
-    "description": "Description for Project 1",
-    "items": ["lalala", "lalala", "lalala", "lalala"],
-    "tech": ["javascript", "typescript", "react", "html5", "css3"],
+    "description": "MuzonEcoSave: Recycables Rewards Machine is an IoT-based recycling machine with touchscreen app that converts plastic bottles to redeemable rewards through QR scanning.",
+"items": ["lalala", "lalala", "lalala", "Achieved 90% accuracy in bottle-to-point conversion and improved counting speed by 80%, ensuring 80% operational availability of the reverse vending machine."],
+    "tech": ["Javascript", "React", "Firebase", "Kotlin", "Arduino",  "ESP32",  "Git",  "VS Code",  "Android Studio", "HTML", "CSS"],
     "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
     },
     {
     "id":1,
-    "title": "MuzonEcoSave Reverse Vending Machine (RVM) 2",
-    "description": "Description for Project 1",
-    "items": ["lalala", "lalala", "lalala", "lalala"],
-    "tech": ["javascript", "typescript", "react", "html5", "css3"],
+    "title": "Sibol: An AI-Powered Planting Application",
+    "description": "Sibol is an urban farming app powered by Gemini AI that provides a complete end-to-end solution for plant identification, care recommendations, and urban farm setup guidance.",
+    "items": [
+      "A winning entry mobile application submitted in Innolympics: GDSC PLM Hackathon.",
+      "Maximizes usage of firebase authentication, firestore, and storage.",
+     "Used an open source AI (Gemini) that utilizes image inputs with specific prompts."],
+    "tech": ["Gemini", "Firebase", "Flutter", "Git", "VS Code"],
     "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
     },
     {
     "id":2,
-    "title": "MuzonEcoSave Reverse Vending Machine (RVM) 3",
+    "title": "Pet Adoption Management System",
+    "description": "Pet Adoption Management System is a full-stack web application that streamlines the pet adoption process for a non-profit organization, Noah's Ark.",
+    "items": ["A complete system with video chat feature, video conferencing and SMS notifications.",
+    "Integrated various APIs including JitsiAPI for video calls, GoogleAPI, PH Locations API, Semaphore API for SMS notification and Web3Form API.",
+    "Achieved key goals including promptly informing 80% of adopters about their application status, reducing inquiries about adopted pets by 90%, and speed up inquiries related to partnerships, collaborations and donations by 90%."],
+    "tech": ["Tailwind", "Laravel", "PHP" , "MySQL", "Git", "Jitsi", "Semaphore", "VS Code", "HTML", "CSS"],
+    "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+    },
+     {
+    "id":3,
+    "title": "Czarina Cuarez Portfolio",
     "description": "Description for Project 1",
     "items": ["lalala", "lalala", "lalala", "lalala"],
-    "tech": ["javascript", "typescript", "react", "html5", "css3"],
+    "tech": ["Javascript", "Typescript", "React", "Vite", "TailwindCSS", "Motion.dev", "i18next", "HTML", "CSS"],
     "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
     }
     ]
   },
   "achieveCategory":{
+      "description":"Beyond that, my passion for tech has driven me to accomplish these",
       "items": [
         {
           "title": "FIRST PLACER & MOST INNOVATIVE PROJECT",
           "type": "Ideathon",
           "description": "<b>QCEcoSave: Reverse Vending Machine</b>, our idea entry, competed with schools across Quezon City and secured an award in <b>Reinventing Cities: Design for Smart and Sustainable Cities</b> at <b>DOST-NCR</b>.",
-          "date": "July 2024 - Oct 2024",
+          "date": "October 2024",
           "placeholder": "secondPattern",
           "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
         },
         {
           "title": "CHAMPION",
           "type": "Hackathon",
-        "description": "Our entry, <b>Sibol: An AI-Powered Planting Application</b>, won the championship in <b>InnOlympics 2024: GDSC-PLM Hackathon</b>, competing against <b>30+ schools</b> from various cities.",
-          "date": "July 2024 - Oct 2024",
+          "description": "Our entry, <b>Sibol: An AI-Powered Planting Application</b>, won the championship in <b>InnOlympics 2024: GDSC-PLM Hackathon</b>, competing against <b>30+ schools</b> from various cities.",
+          "date": "April 2024",
           "placeholder": "firstPattern",
           "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
         },
@@ -116,18 +183,22 @@
           "title": "ACP Cloud Security",
           "type": "Certification",
         "description": "<b>Alibaba Cloud's Cloud Security Certification (ACP Level - Alibaba Cloud Certified Professional)</b> is a professional technical certification oriented to <b>architects, developers, and O&M personnel</b> that use Alibaba Cloud products.",
-          "date": "July 2024 - Oct 2024",
+          "date": "October 2023",
           "placeholder": "firstPattern",
-          "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+          "image": "https://media.licdn.com/dms/image/v2/D562DAQElh53Y79ypJw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1701167869337?e=1741975200&v=beta&t=vn2RjMYlbcK0zp1p22LDFmvjRzQhscVagFESogGkPLM"
         },
          {
           "title": "ACA Cloud Computing",
           "type": "Certification",
         "description": "<b>Alibaba Cloud Certification Associate (ACA - Alibaba Cloud Certification Associate)</b> is a certification designed for those who can use <b>Alibaba Cloud Computing</b> products.",
-          "date": "July 2024 - Oct 2024",
+          "date": "May 2023",
           "placeholder": "secondPattern",
-          "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+          "image": "https://media.licdn.com/dms/image/v2/D562DAQEPubA75BctqQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1701168041960?e=1741975200&v=beta&t=w-ybfIOP5-wD1N0TMpEwkPXue6plovTKR5EdO9XG3VQ"
         }
       ]
+  },
+  "contactCategory":{
+    "title": "Let's turn your ideas into something remarkable",
+    "slot":"I'm open for freelance, full-time or internship roles"
   }
 }
