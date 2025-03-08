@@ -15,7 +15,8 @@
   --color-rose-400: #e08b99;
   --color-rose-500: #d46679;
 
-  /** SIZES **/
+  /** PROJECTS BACKGROUND **/
+  --color-beige-100: #fcfaf2;
 
   /** BORDER RADIUS **/
   --radius-default: 20px;
@@ -44,6 +45,28 @@ html {
 }
 
 @layer base {
+  input,
+  textarea {
+    border: 1px solid var(--color-rose-400);
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-rose-300);
+      box-shadow: 0 0 0 2px var(--color-rose-100);
+    }
+
+    &::placeholder {
+      font-size: 14px;
+    }
+
+    &:hover {
+      border-color: var(--color-rose-300);
+    }
+  }
   .home-shadow {
     box-shadow: 0 4px 30px white;
     transition: ease-in 2s;
@@ -96,6 +119,15 @@ html {
   }
 
   nav {
+    &.mobile-nav {
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(5.2px);
+      border: 1px solid rgba(255, 255, 255, 1);
+    }
     &.main-nav {
       font-size: 14px;
       font-weight: var(--font-weight-semibold);

@@ -17,7 +17,7 @@ const ExperienceSection = () => {
   const categories = rawData?.categories ?? [];
 
   return (
-    <section className='min-h-screen flex flex-col items-center justify-center px-8 md:px-0' aria-labelledby="experience-heading">
+    <section className='min-h-screen flex flex-col items-center justify-center' aria-labelledby="experience-heading">
       <p className="font-straight text-rose-300 text-sm uppercase font-bold my-4 text-center">{t('expCategory.description')}</p>
       <h2 id="experience-heading" className="text-5xl coquette-font font-bold text-center">
         {t('titles.experience')}

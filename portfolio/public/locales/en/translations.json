@@ -19,7 +19,7 @@
     },
     "intro": {
     "greets": "Hi, I'm ",
-    "intro": "I am an aspiring",
+    "intro": "I am an achiever, a perfectionist, and an aspiring",
     "role": "full-stack developer ",
     "workplace": "who currently sets her new foot unto the workplace.",
     "passion": "My passion for software development—and",
@@ -36,10 +36,16 @@
         "secLoc":"Metro Manila, Philippines",
         "sigQuote":"Like a butterfly, her wings will remain forever unfolded",
         "copyright": "Copyright © 2025 Czarina Cuarez. All rights reserved.",
+        "phoneNum": "+639566216696",
         "socials":{
           "linkedin":"https://www.linkedin.com/in/czarina-krisel-cuarez-1a657721b/",
           "github":"https://github.com/czarinacuarez"
         }
+    },
+    "contactModal":{
+      "intro": "Feel free to reach out to me via:",
+      "others":"or send me a message"
+
     },
     "button":{
         "connect":"Let's Connect"
@@ -125,9 +131,9 @@
     "id":0,
     "title": "MuzonEcoSave Reverse Vending Machine (RVM)",
     "description": "MuzonEcoSave: Recycables Rewards Machine is an IoT-based recycling machine with touchscreen app that converts plastic bottles to redeemable rewards through QR scanning.",
-"items": ["lalala", "lalala", "lalala", "Achieved 90% accuracy in bottle-to-point conversion and improved counting speed by 80%, ensuring 80% operational availability of the reverse vending machine."],
+"items": ["Implemented Firebase as the primary database for real-time communication on both machine and web application.", "Achieved 90% accuracy in bottle-to-point conversion and improved counting speed by 80%, ensuring 80% operational availability of the reverse vending machine."],
     "tech": ["Javascript", "React", "Firebase", "Kotlin", "Arduino",  "ESP32",  "Git",  "VS Code",  "Android Studio", "HTML", "CSS"],
-    "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+    "image": "1.webp"
     },
     {
     "id":1,
@@ -138,7 +144,7 @@
       "Maximizes usage of firebase authentication, firestore, and storage.",
      "Used an open source AI (Gemini) that utilizes image inputs with specific prompts."],
     "tech": ["Gemini", "Firebase", "Flutter", "Git", "VS Code"],
-    "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+    "image": "2.webp"
     },
     {
     "id":2,
@@ -148,15 +154,15 @@
     "Integrated various APIs including JitsiAPI for video calls, GoogleAPI, PH Locations API, Semaphore API for SMS notification and Web3Form API.",
     "Achieved key goals including promptly informing 80% of adopters about their application status, reducing inquiries about adopted pets by 90%, and speed up inquiries related to partnerships, collaborations and donations by 90%."],
     "tech": ["Tailwind", "Laravel", "PHP" , "MySQL", "Git", "Jitsi", "Semaphore", "VS Code", "HTML", "CSS"],
-    "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+    "image": "3.webp"
     },
      {
     "id":3,
     "title": "Czarina Cuarez Portfolio",
-    "description": "Description for Project 1",
-    "items": ["lalala", "lalala", "lalala", "lalala"],
+    "description": "A portfolio made for showcasing my projects, experiences, and achievements.",
+    "items": ["Implements industry code standard practices learned during my internship.", "Focuses on implementing modern design techniques."],
     "tech": ["Javascript", "Typescript", "React", "Vite", "TailwindCSS", "Motion.dev", "i18next", "HTML", "CSS"],
-    "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+    "image": "4.webp"
     }
     ]
   },
@@ -164,12 +170,13 @@
       "description":"Beyond that, my passion for tech has driven me to accomplish these",
       "items": [
         {
-          "title": "FIRST PLACER & MOST INNOVATIVE PROJECT",
+          "title": "FIRST PLACER & MOST INNOVATIVE SOLUTION",
           "type": "Ideathon",
           "description": "<b>QCEcoSave: Reverse Vending Machine</b>, our idea entry, competed with schools across Quezon City and secured an award in <b>Reinventing Cities: Design for Smart and Sustainable Cities</b> at <b>DOST-NCR</b>.",
           "date": "October 2024",
           "placeholder": "secondPattern",
-          "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+          "image": "https://scontent.fmnl8-6.fna.fbcdn.net/v/t39.30808-6/465459238_969192975246340_1277584423299692402_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHj6-MPWT-iA_7LXi8kW5XZ6c0Uplnn7hTpzRSmWefuFOeqtzLCwF1A-60jtVHjieOOACLJcHR5kRiQgIvSXZuN&_nc_ohc=AGLlxZPfSQYQ7kNvgFdV5xV&_nc_oc=AdhvTwm7D-qgIP-fSD_FdpseA--tQPD7hjvlJk4xUwZQlZwrBE6ua7OhC7zARxV1WWaVrz7OeIrsWRsFhTE8iCbK&_nc_zt=23&_nc_ht=scontent.fmnl8-6.fna&_nc_gid=AlqhUP7B2ltVJFwCkCz_U4X&oh=00_AYHIjPPCA9zGBCGRVdUBCUzqqeav4v08dYaep75HU8Vuhg&oe=67D1A181"
+
         },
         {
           "title": "CHAMPION",
@@ -177,7 +184,8 @@
           "description": "Our entry, <b>Sibol: An AI-Powered Planting Application</b>, won the championship in <b>InnOlympics 2024: GDSC-PLM Hackathon</b>, competing against <b>30+ schools</b> from various cities.",
           "date": "April 2024",
           "placeholder": "firstPattern",
-          "image": "https://lumiere-a.akamaihd.net/v1/images/lightningmcqueen_characterbio_2bd07a1c_78f6b425.jpeg?region=75%2C0%2C450%2C600"
+          "image": "https://scontent.fmnl8-2.fna.fbcdn.net/v/t39.30808-6/480736876_622256657358233_2106745415923249969_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGS7H-9a-OXozI3VdqB17ABagMkRVGmspJqAyRFUaaykmC_GX5X1LfOGLYC0S1IUJeNpmCMWRcSCAELzh2FwtJG&_nc_ohc=HBdT9V74Ka8Q7kNvgF-zpBH&_nc_oc=AdidPJDPh4upc6JvKCUj01zCGCXJOjUKJTxLmzIWRAuFQeSj1w1DtGyW3AL_fLcm7vswSeQx4C-8nVRUmBtVR30J&_nc_zt=23&_nc_ht=scontent.fmnl8-2.fna&_nc_gid=A6fDL85pjVzZ02mbaxgcFbg&oh=00_AYF0dTgHjE202P4-JT_eYZ0HDnhtmYITIaREKnHDCZVRGw&oe=67D1B84F"
+
         },
          {
           "title": "ACP Cloud Security",

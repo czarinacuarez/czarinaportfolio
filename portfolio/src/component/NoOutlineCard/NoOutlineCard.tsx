@@ -44,7 +44,7 @@ function NoOutlineCard({
         {/* Placeholder image - hidden on mobile */}
         <motion.img
           src={placeholder}
-          className="w-full h-full object-cover hidden md:block"
+          className="w-full h-full object-cover hidden lg:block"
           animate={{ opacity: isHovered ? 0 : 1 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         />
@@ -52,7 +52,7 @@ function NoOutlineCard({
         {/* Main image - always visible on mobile */}
         <motion.img
           src={image}
-          className="absolute inset-0 w-full h-full object-cover md:opacity-0"
+          className="absolute inset-0 w-full h-full object-cover lg:opacity-0"
           animate={{ opacity: isHovered ? 1 : 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         />
@@ -60,7 +60,7 @@ function NoOutlineCard({
         {/* Mobile-only main image (no animation) */}
         <img
           src={image}
-          className="w-full h-full object-cover md:hidden"
+          className="w-full h-full object-cover lg:hidden"
           alt={title}
         />
       </div>

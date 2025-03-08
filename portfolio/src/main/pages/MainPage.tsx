@@ -10,35 +10,39 @@ import ExperienceSection from './components/ExperienceSection';
 
 const MainPage = () => {
   return (
-    <div>
+    <div >
       <section id="home" className='relative'>
         <HomeSection />
       </section>
 
-      <section id="about" className='relative' >
-        <AboutSection />
-      </section>
+      <div className="px-3">
+        <section id="about" className='relative' >
+          <AboutSection />
+        </section>
 
-      <section id="experience">
-        <ExperienceSection />
-      </section>
+        <section id="experience">
+          <ExperienceSection />
+        </section>
 
-      <section id="projects" className="min-h-screen">
-        <ProjectsSection />
-      </section>
+        <section id="projects" className="min-h-screen">
+          <ProjectsSection />
+        </section>
 
-      <section id="achievement" className="min-h-screen flex justify-center items-center">
-        <AchievementsSection />
-      </section>
+        <section id="achievement" className="min-h-screen flex justify-center items-center">
+          <AchievementsSection />
+        </section>
 
-      <section id="contact" className="min-h-screen flex justify-center items-center">
-        <ContactSection />
-      </section>
+        <section id="contact" className="min-h-screen flex justify-center items-center">
+          <ContactSection />
+        </section>
 
 
-      <section id="footer" className="min-h-screen flex justify-center items-center">
-        <FooterSection />
-      </section>
+        <section id="footer" className="min-h-screen flex justify-center items-center">
+          <FooterSection />
+        </section>
+      </div>
+
+
     </div>
   )
 }

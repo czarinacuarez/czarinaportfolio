@@ -1,0 +1,24 @@
+.pink-button {
+    /* From https://css.glass */
+    background: var(--color-rose-50);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+
+    span {
+        text-shadow: 2px 2px 15px var(--color-rose-400);
+    }
+
+    &.send {
+        background: var(--color-rose-100);
+    }
+    &:hover {
+        background: white;
+        box-shadow: 0 4px 35px var(--color-rose-200);
+        border-color: var(--color-rose-100);
+        color: var(--color-rose-300);
+        span {
+            text-shadow: none;
+        }
+    }
+}

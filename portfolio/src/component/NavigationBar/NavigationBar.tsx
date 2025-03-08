@@ -117,7 +117,7 @@ const NavigationBar = () => {
   return (
     <div>
 
-      <div className='fixed md:hidden  w-full top-0 z-50 flex p-2 justify-between items-center bg-transparent'>
+      <div className='fixed md:hidden  w-full top-0 z-50 flex p-2 justify-between my-2 items-center bg-transparent'>
         <img src={logo} className='size-16 ' alt="Portfolio Logo"></img>
         <motion.nav
           className=' px-3'
@@ -154,7 +154,7 @@ const NavigationBar = () => {
         className="fixed  md:hidden  z-50 left-0 right-0 top-[80px] mx-auto w-[90%] max-w-[800px] lg:hidden"
         id="mobile-menu" role="menu"
       >
-        <nav className={`flex flex-col gap-2 main-nav justify-between  *:text-left  rounded-3xl p-3
+        <nav className={`flex flex-col gap-2 mobile-nav justify-between  *:text-left  rounded-3xl p-3
         *:rounded-default *:py-2 *:transition-colors *:duration-300 *:hover:active *:focus-visible:active
            ${activeSection === 'home' ? 'home-shadow' : 'default-shadow'}`}>
           {navItems.map((item) => (

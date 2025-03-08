@@ -4,12 +4,14 @@ import sparkling from '../../assets/img/sparkling.webp';
 import ShinyButton from "../ShinyButton/ShinyButton";
 import CopyButton from "../CopyButton/CopyButton";
 import { useTranslation } from "react-i18next";
+import { ContactModal } from "../ContactModal/ContactModal";
 
 export default function MultiLayerParallax() {
   const ref = useRef(null);
   const cloudsRef = useRef<HTMLDivElement>(null);
   const { t } = useTranslation('translations');
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -47,6 +49,7 @@ export default function MultiLayerParallax() {
     <div
       ref={ref}
       className="w-full h-screen overflow-hidden relative grid place-items-center">
+      <ContactModal open={open} setOpen={setOpen} />
 
 
       <motion.div style={{ y: textY }} className="relative flex items-center justify-center z-10 mb-10">
@@ -69,7 +72,8 @@ export default function MultiLayerParallax() {
           </motion.h1>
           <motion.h3 className="uppercase coquette-description my-4 md:my-2 text-2xl z-5">{t('details.position')}</motion.h3>
           <div className="flex md:flex-row *:font-straight flex-col w-fit m-auto gap-4 md:gap-5 my-4 justify-center">
-            <ShinyButton className="z-5">{t('button.connect')}</ShinyButton>
+            <ShinyButton onClick={() => setOpen(true)}
+              className="z-5">{t('button.connect')}</ShinyButton>
             <CopyButton className="z-5">{t('details.emailAdd')}</CopyButton>
           </div>
         </motion.div>
