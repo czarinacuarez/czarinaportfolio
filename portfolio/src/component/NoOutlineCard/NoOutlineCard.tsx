@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import PinkOutlineContainer from '../PinkOutlineContainer/PinkOutlineContainer';
 import { motion } from 'motion/react';
 import DOMPurify from 'dompurify';

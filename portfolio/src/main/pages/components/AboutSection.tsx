@@ -1,4 +1,3 @@
-import React from 'react';
 import me from "../../../assets/img/me.webp"
 import { GithubIcon, LinkedinIcon } from '../../../assets/icons';
 import OutlineButton from '../../../component/OutlineButton/OutlineButton';

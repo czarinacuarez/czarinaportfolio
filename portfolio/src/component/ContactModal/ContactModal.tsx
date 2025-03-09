@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from "react";
+import { useState } from "react";
+
+import * as React from "react";
 import useMeasure from "react-use-measure";
 import {
   useDragControls,
@@ -243,4 +245,4 @@ export function ContactModal({ open, setOpen }: DragCloseDrawerProps): React.Rea
       )}
     </>
   );
-};
+}

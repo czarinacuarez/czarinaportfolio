@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useRef, useState } from "react";
 import { useActiveSection } from "../../hooks/useActiveSection";

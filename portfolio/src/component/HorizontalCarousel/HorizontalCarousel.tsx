@@ -1,5 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import OutlineButton from "../OutlineButton/OutlineButton";
 import { ProjectCategory } from "../../interface";
 

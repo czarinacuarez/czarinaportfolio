@@ -1,4 +1,3 @@
-import React from 'react';
 import { GithubIcon, LinkedinIcon, LocationIcon, MailIcon } from '../../../assets/icons';
 import thinRibbon from '../../../assets/icons/thinRibbon.svg';
 import butterfly from '../../../assets/icons/butterfly.svg';
