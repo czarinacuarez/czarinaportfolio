@@ -1,27 +1,334 @@
 {
-    "titles":{
-        "home":"Home",
-        "about": "About",
-        "experience":"Experience",
-        "projects":"Projects",
-        "resume":"Resume"
-    },
-      "navDef": {
-        "home": "Step into my digital wonderland!",
-        "about": "Let's get to know each other better~",
-        "experience": "A peek into my professional adventures!",
-        "projects": "Take a look at what I've crafted with love~",
-        "resume": "My story on paper, but make it sparkly!"
-    },
-    "details":{
-        "wholeName":"Czarina Cuarez",
-        "position":"Full Stack Developer",
-        "emailAdd":"czarinakrisel@gmail.com"
-    },
-    "button":{
-        "connect":"Let's Connect"
-    },
-    "msg":{
-        "emailCopied":"Email Already Copied! :>"
+  "portfolio": "Portfolio",
+  "getInTouch": "Get in touch",
+  "titles": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "achievements": "Achievements",
+    "techStack": "Tech Stack",
+    "projects": "Projects",
+    "resume": "Resume"
+  },
+  "navDef": {
+    "home": "Step into my digital wonderland!",
+    "about": "Let's get to know each other better~",
+    "experience": "A peek into my professional adventures!",
+    "projects": "Take a look at what I've crafted with love~",
+    "resume": "My story on paper, but make it sparkly!"
+  },
+  "intro": {
+    "greets": "Hi, I'm ",
+    "intro": "I am an achiever, a perfectionist, and an aspiring",
+    "role": "full-stack developer ",
+    "workplace": "who currently sets her new foot unto the workplace.",
+    "passion": "My passion for software development—and",
+    "personality": "a love for all things pink",
+    "growth": "—drives me to continuously learn and grow in this exciting field.",
+    "now": "Now, I'm focusing on clean code principles and industry best practices to deliver exceptional software solutions."
+  },
+  "details": {
+    "title": "About Me",
+    "wholeName": "Czarina Cuarez",
+    "description": "Gracefully crafting full-stack solutions to elevate your company’s success.",
+    "position": "Full Stack Developer",
+    "emailAdd": "czarinakrisel@gmail.com",
+    "primLoc": "San Jose del Monte, Bulacan, Philippines",
+    "secLoc": "Metro Manila, Philippines",
+    "sigQuote": "Like a butterfly, her wings will remain forever unfolded",
+    "copyright": "Copyright © 2025 Czarina Cuarez. All rights reserved.",
+    "phoneNum": "+639566216696",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/czarina-krisel-cuarez-1a657721b/",
+      "github": "https://github.com/czarinacuarez"
     }
+  },
+  "contactModal": {
+    "intro": "Feel free to reach out to me via:",
+    "others": "or send me a message",
+    "sendMessage": "Send Message"
+  },
+  "button": {
+    "connect": "Let's Connect"
+  },
+  "msg": {
+    "emailCopied": "Email Already Copied! :>"
+  },
+  "techCategory": {
+    "description": "Currently, I'm working with these tools to improve my",
+    "items": [
+      {
+        "name": "JavaScript",
+        "icon": "javascript.webp"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "typescript.webp"
+      },
+      {
+        "name": "PHP",
+        "icon": "php.webp"
+      },
+      {
+        "name": "React",
+        "icon": "react.webp"
+      },
+      {
+        "name": "Laravel",
+        "icon": "laravel.webp"
+      },
+      {
+        "name": "HTML",
+        "icon": "html.webp"
+      },
+      {
+        "name": "CSS",
+        "icon": "css.webp"
+      },
+      {
+        "name": "SASS/SCSS",
+        "icon": "sass.webp"
+      },
+      {
+        "name": "Postman",
+        "icon": "postman.webp"
+      },
+      {
+        "name": "AWS",
+        "icon": "aws.webp"
+      },
+      {
+        "name": "TailwindCSS",
+        "icon": "tailwind.webp"
+      },
+      {
+        "name": "Bootstrap",
+        "icon": "bootstrap.webp"
+      },
+      {
+        "name": "NodeJS",
+        "icon": "nodejs.webp"
+      },
+      {
+        "name": "NestJS",
+        "icon": "nestjs.webp"
+      },
+      {
+        "name": "Flutter",
+        "icon": "flutter.webp"
+      },
+      {
+        "name": "Git",
+        "icon": "git.webp"
+      },
+      {
+        "name": "Python",
+        "icon": "python.webp"
+      },
+      {
+        "name": "Java",
+        "icon": "java.webp"
+      },
+      {
+        "name": "Firebase",
+        "icon": "firebase.webp"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "postgresql.webp"
+      },
+      {
+        "name": "MySQL",
+        "icon": "mysql.webp"
+      },
+      {
+        "name": "VS Code",
+        "icon": "vscode.webp"
+      },
+      {
+        "name": "Android Studio",
+        "icon": "androidstudio.webp"
+      }
+    ]
+  },
+  "expCategory": {
+    "description": "Here’s what I’ve learned and accomplished over time in my",
+    "categories": [
+      {
+        "title": "Education",
+        "icon": "AcademicCapIcon",
+        "items": [
+          {
+            "role": "BS Information Technology with Specialization in Mobile and Internet Technologies",
+            "institution": "NU Fairview",
+            "date": "Aug 2021 - Present",
+            "description": "Consistent Blue Scholarship Student"
+          }
+        ]
+      },
+      {
+        "title": "Extra Curriculars",
+        "icon": "ExtraCurricularsIcon",
+        "items": [
+          {
+            "role": "AWS re/Start Program Graduate",
+            "institution": "Amazon Web Services",
+            "date": "July 2024 - Oct 2024"
+          },
+          {
+            "role": "Google Developers Student Club Lead",
+            "institution": "Google Developers",
+            "date": "Aug 2023 - July 2024"
+          }
+        ]
+      },
+      {
+        "title": "Work",
+        "icon": "WorkIcon",
+        "items": [
+          {
+            "role": "Software Developer Intern",
+            "institution": "JLabs Innovatech Inc.",
+            "date": "Dec 2024 - Feb 2025"
+          }
+        ]
+      }
+    ]
+  },
+  "projCategory": {
+    "description": "Over the years, I've built and contributed to multiple",
+    "projects": [
+      {
+        "id": 0,
+        "title": "MuzonEcoSave Reverse Vending Machine (RVM)",
+        "description": "MuzonEcoSave: Recycables Rewards Machine is an IoT-based recycling machine with touchscreen app that converts plastic bottles to redeemable rewards through QR scanning.",
+        "items": [
+          "Implemented Firebase as the primary database for real-time communication on both machine and web application.",
+          "Achieved 90% accuracy in bottle-to-point conversion and improved counting speed by 80%, ensuring 80% operational availability of the reverse vending machine."
+        ],
+        "tech": [
+          "Javascript",
+          "React",
+          "Firebase",
+          "Kotlin",
+          "Arduino",
+          "ESP32",
+          "Git",
+          "VS Code",
+          "Android Studio",
+          "HTML",
+          "CSS"
+        ],
+        "image": "1.webp",
+        "github": "https://github.com/czarinacuarez/muzonproper",
+        "link": "muzonecosave.vercel.app"
+      },
+      {
+        "id": 1,
+        "title": "Sibol: An AI-Powered Planting Application",
+        "description": "Sibol is an urban farming app powered by Gemini AI that provides a complete end-to-end solution for plant identification, care recommendations, and urban farm setup guidance.",
+        "items": [
+          "A winning entry mobile application submitted in Innolympics: GDSC PLM Hackathon.",
+          "Maximizes usage of firebase authentication, firestore, and storage.",
+          "Used an open source AI (Gemini) that utilizes image inputs with specific prompts."
+        ],
+        "tech": [
+          "Gemini",
+          "Firebase",
+          "Flutter",
+          "Git",
+          "VS Code"
+        ],
+        "image": "2.webp",
+        "github": "https://github.com/czarinacuarez/SibolApp"
+      },
+      {
+        "id": 2,
+        "title": "Pet Adoption Management System",
+        "description": "Pet Adoption Management System is a full-stack web application that streamlines the pet adoption process for a non-profit organization, Noah's Ark.",
+        "items": [
+          "A complete system with video chat feature, video conferencing and SMS notifications.",
+          "Integrated various APIs including JitsiAPI for video calls, GoogleAPI, PH Locations API, Semaphore API for SMS notification and Web3Form API.",
+          "Achieved key goals including promptly informing 80% of adopters about their application status, reducing inquiries about adopted pets by 90%, and speed up inquiries related to partnerships, collaborations and donations by 90%."
+        ],
+        "tech": [
+          "Tailwind",
+          "Laravel",
+          "PHP",
+          "MySQL",
+          "Git",
+          "Jitsi",
+          "Semaphore",
+          "VS Code",
+          "HTML",
+          "CSS"
+        ],
+        "image": "3.webp",
+        "github": "https://github.com/czarinacuarez/Noah-s-Ark-Cat-and-Dog"
+      },
+      {
+        "id": 3,
+        "title": "Czarina Cuarez Portfolio",
+        "description": "A portfolio made for showcasing my projects, experiences, and achievements.",
+        "items": [
+          "Implements industry code standard practices learned during my internship.",
+          "Focuses on implementing modern design techniques."
+        ],
+        "tech": [
+          "Javascript",
+          "Typescript",
+          "React",
+          "Vite",
+          "TailwindCSS",
+          "Motion.dev",
+          "i18next",
+          "HTML",
+          "CSS"
+        ],
+        "image": "4.webp",
+        "link": "czarinacuarez.me"
+      }
+    ]
+  },
+  "achieveCategory": {
+    "description": "Beyond that, my passion for tech has driven me to accomplish these",
+    "items": [
+      {
+        "title": "FIRST PLACER & MOST INNOVATIVE SOLUTION",
+        "type": "Ideathon",
+        "description": "<b>QCEcoSave: Reverse Vending Machine</b>, our idea entry, competed with schools across Quezon City and secured an award in <b>Reinventing Cities: Design for Smart and Sustainable Cities</b> at <b>DOST-NCR</b>.",
+        "date": "October 2024",
+        "placeholder": "secondPattern",
+        "image": "https://scontent.fmnl8-6.fna.fbcdn.net/v/t39.30808-6/465459238_969192975246340_1277584423299692402_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHj6-MPWT-iA_7LXi8kW5XZ6c0Uplnn7hTpzRSmWefuFOeqtzLCwF1A-60jtVHjieOOACLJcHR5kRiQgIvSXZuN&_nc_ohc=AGLlxZPfSQYQ7kNvgFdV5xV&_nc_oc=AdhvTwm7D-qgIP-fSD_FdpseA--tQPD7hjvlJk4xUwZQlZwrBE6ua7OhC7zARxV1WWaVrz7OeIrsWRsFhTE8iCbK&_nc_zt=23&_nc_ht=scontent.fmnl8-6.fna&_nc_gid=AlqhUP7B2ltVJFwCkCz_U4X&oh=00_AYHIjPPCA9zGBCGRVdUBCUzqqeav4v08dYaep75HU8Vuhg&oe=67D1A181"
+      },
+      {
+        "title": "CHAMPION",
+        "type": "Hackathon",
+        "description": "Our entry, <b>Sibol: An AI-Powered Planting Application</b>, won the championship in <b>InnOlympics 2024: GDSC-PLM Hackathon</b>, competing against <b>30+ schools</b> from various cities.",
+        "date": "April 2024",
+        "placeholder": "firstPattern",
+        "image": "https://scontent.fmnl8-2.fna.fbcdn.net/v/t39.30808-6/480736876_622256657358233_2106745415923249969_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGS7H-9a-OXozI3VdqB17ABagMkRVGmspJqAyRFUaaykmC_GX5X1LfOGLYC0S1IUJeNpmCMWRcSCAELzh2FwtJG&_nc_ohc=HBdT9V74Ka8Q7kNvgF-zpBH&_nc_oc=AdidPJDPh4upc6JvKCUj01zCGCXJOjUKJTxLmzIWRAuFQeSj1w1DtGyW3AL_fLcm7vswSeQx4C-8nVRUmBtVR30J&_nc_zt=23&_nc_ht=scontent.fmnl8-2.fna&_nc_gid=A6fDL85pjVzZ02mbaxgcFbg&oh=00_AYF0dTgHjE202P4-JT_eYZ0HDnhtmYITIaREKnHDCZVRGw&oe=67D1B84F"
+      },
+      {
+        "title": "ACP Cloud Security",
+        "type": "Certification",
+        "description": "<b>Alibaba Cloud's Cloud Security Certification (ACP Level - Alibaba Cloud Certified Professional)</b> is a professional technical certification oriented to <b>architects, developers, and O&M personnel</b> that use Alibaba Cloud products.",
+        "date": "October 2023",
+        "placeholder": "firstPattern",
+        "image": "https://media.licdn.com/dms/image/v2/D562DAQElh53Y79ypJw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1701167869337?e=1741975200&v=beta&t=vn2RjMYlbcK0zp1p22LDFmvjRzQhscVagFESogGkPLM"
+      },
+      {
+        "title": "ACA Cloud Computing",
+        "type": "Certification",
+        "description": "<b>Alibaba Cloud Certification Associate (ACA - Alibaba Cloud Certification Associate)</b> is a certification designed for those who can use <b>Alibaba Cloud Computing</b> products.",
+        "date": "May 2023",
+        "placeholder": "secondPattern",
+        "image": "https://media.licdn.com/dms/image/v2/D562DAQEPubA75BctqQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1701168041960?e=1741975200&v=beta&t=w-ybfIOP5-wD1N0TMpEwkPXue6plovTKR5EdO9XG3VQ"
+      }
+    ]
+  },
+  "contactCategory": {
+    "title": "Let's turn your ideas into something remarkable",
+    "slot": "I'm open for freelance, full-time or internship roles"
+  }
 }

@@ -6,7 +6,6 @@
 @theme {
   --font-cursive: "Playfair Display", serif;
   --font-straight: "Source Sans 3", serif;
-  --radius-default: 20px;
   --font-weight-semibold: 500;
 
   /** COLORS **/
@@ -16,13 +15,11 @@
   --color-rose-400: #e08b99;
   --color-rose-500: #d46679;
 
-  /** SIZES **/
-}
+  /** PROJECTS BACKGROUND **/
+  --color-beige-100: #fcfaf2;
 
-::-webkit-scrollbar {
-  height: 12px;
-  width: 12px;
-  background: white;
+  /** BORDER RADIUS **/
+  --radius-default: 20px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -31,17 +28,46 @@
   -webkit-box-shadow: 0px 4px 42.2px var(--color-rose-500);
 }
 
+/* ::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+  background: white;
+}
+
+
+
 ::-webkit-scrollbar-thumb:active {
   background: var(--color-rose-300);
   -webkit-box-shadow: 0px 4px 42.2px var(--color-rose-400);
 }
-
-/* Standard scrollbar properties (future-proofing) */
+*/
 html {
   scroll-behavior: smooth;
 }
 
 @layer base {
+  input,
+  textarea {
+    border: 1px solid var(--color-rose-400);
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-rose-300);
+      box-shadow: 0 0 0 2px var(--color-rose-100);
+    }
+
+    &::placeholder {
+      font-size: 14px;
+    }
+
+    &:hover {
+      border-color: var(--color-rose-300);
+    }
+  }
   .home-shadow {
     box-shadow: 0 4px 30px white;
     transition: ease-in 2s;
@@ -49,6 +75,11 @@ html {
 
   .default-shadow {
     box-shadow: 0 4px 30px var(--color-rose-100);
+    transition: ease-in 2s;
+  }
+
+  .big-shadow {
+    box-shadow: 0 4px 30px var(--color-rose-400);
     transition: ease-in 2s;
   }
 
@@ -61,19 +92,43 @@ html {
     font-family: var(--font-cursive);
   }
 
+  .gradient-text {
+    background: linear-gradient(90deg, #f1c7ce 0%, #e08b99 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .coquette-title {
     font-style: italic;
     font-family: var(--font-cursive);
     text-shadow: 0px 4px 42.2px var(--color-rose-500);
+
+    &.darker {
+      text-shadow: 0px 0px 30px var(--color-rose-500);
+    }
   }
 
   .coquette-description {
     font-style: normal;
     font-family: var(--font-straight);
     text-shadow: 0px 4px 42.2px var(--color-rose-500);
+
+    &.darker {
+      text-shadow: 2px 2px 25px var(--color-rose-500);
+    }
   }
 
   nav {
+    &.mobile-nav {
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(5.2px);
+      border: 1px solid rgba(255, 255, 255, 1);
+    }
     &.main-nav {
       font-size: 14px;
       font-weight: var(--font-weight-semibold);
@@ -141,4 +196,18 @@ html {
     width: fit-content;
     max-height: 800px;
   }
+}
+
+#contact {
+  .contact-container {
+    background-image: url("./assets/img/pinkNoClouds.webp");
+    background-position: bottom;
+    background-size: cover;
+  }
+}
+
+.divider {
+  background: linear-gradient(90deg, #ffffff 0%, #e6a6b1 50%, #ffffff 100%);
+  height: 1px;
+  width: 100%;
 }

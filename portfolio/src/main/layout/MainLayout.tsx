@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { Outlet } from 'react-router-dom'
 import NavigationBar from '../../component/NavigationBar/NavigationBar'
+import ReactLenis from 'lenis/react';
 
 const MainLayout = () => {
   return (
@@ -9,10 +9,13 @@ const MainLayout = () => {
       <header>
         <NavigationBar />
       </header>
-      <main>
-        <Outlet />
-      </main>
-    </div>
+      <ReactLenis root
+        options={{ lerp: 0.05 }}>
+        <main>
+          <Outlet />
+        </main>
+      </ReactLenis>
+    </div >
   )
 }
 
