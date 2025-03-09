@@ -52,11 +52,11 @@ export function ContactModal({ open, setOpen }: DragCloseDrawerProps): React.Rea
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:czarinakrisel@gmail.com';
+    window.location.href = `mailto:${t('details.emailAdd')}`;
   };
 
   const handlePhoneClick = () => {
-    window.location.href = 'tel:+639566216696';
+    window.location.href = `tel:${t('details.phoneNum')}`;
   };
 
 
@@ -103,10 +103,12 @@ export function ContactModal({ open, setOpen }: DragCloseDrawerProps): React.Rea
         setFormData({ name: "", email: "", message: "" });
         setTimeout(() => {
           handleClose();
+          setShowAlert(false);
         }, 2000);
       } else {
         setResult(data.message || "Something went wrong. Please try again.");
         setAlertType('error');
+        setTimeout(() => setShowAlert(false), 3000);
       }
     } catch (error) {
       setResult("Failed to send message. Please try again.");
@@ -114,7 +116,6 @@ export function ContactModal({ open, setOpen }: DragCloseDrawerProps): React.Rea
     } finally {
       setIsSubmitting(false);
       setShowAlert(true);
-      setTimeout(() => setShowAlert(false), 3000);
     }
   };
 
@@ -232,7 +233,7 @@ export function ContactModal({ open, setOpen }: DragCloseDrawerProps): React.Rea
                   className={`send ${!isFormValid ? 'opacity-50 cursor-not-allowed' : ''}`}
                   disabled={!isFormValid}
                 >
-                  Send Message
+                  {t('contactModal.sendMessage')}
                 </PinkButton>
               </form>
 

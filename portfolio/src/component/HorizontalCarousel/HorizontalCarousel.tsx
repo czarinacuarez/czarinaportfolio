@@ -15,21 +15,23 @@ const HorizontalCarousel = ({ projects }: HorizontalCarouselProps) => {
   );
 };
 
-interface HorizontalScrollCarouselProps {
-  projects: ProjectCategory[];
-}
 
-const HorizontalScrollCarousel = ({ projects }: HorizontalScrollCarouselProps) => {
+
+const HorizontalScrollCarousel = ({ projects }: HorizontalCarouselProps) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
-
   return (
     <section ref={targetRef} className="relative h-[300vh]">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      <div
+        className="sticky top-0 flex h-screen items-center overflow-hidden"
+        role="region"
+        aria-label="Project carousel"
+        tabIndex={0}
+      >
         <motion.div style={{ x }} className="flex gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
 import ShinyButton from '../../../component/ShinyButton/ShinyButton';
 import sparkling from '../../../assets/icons/sparklingButterfly.svg';
 import { useTranslation } from 'react-i18next';
@@ -10,11 +9,9 @@ const ContactSection = () => {
 
   return (
     <div className=' w-full  flex items-center justify-center'>
-      <motion.div
+      <div
         className="contact-container home-shadow py-20 md:py-30 px-10 md:px-20 rounded-2xl relative"
-        initial={{ y: 48, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 2 }} >
+      >
         <ContactModal open={open} setOpen={setOpen} />
 
         <img
@@ -25,14 +22,14 @@ const ContactSection = () => {
         <h1 className="font-bold text-5xl coquette-title darker text-center text-white max-w-xl mx-auto relative z-10">
           {t('contactCategory.title')}
         </h1>
-        <div className="flex justify-center relative z-10">
+        <div className="flex justify-center relative z-3">
           <ShinyButton onClick={() => setOpen(true)}
             className="text-white mt-5 darker">{t('getInTouch')}</ShinyButton>
         </div>
         <span className='text-xl text-center text-white font-bold coquette-description darker block mt-5 relative z-10'>
           {t('contactCategory.slot')}
         </span>
-      </motion.div >
+      </div>
     </div>
   )
 }

@@ -4,7 +4,6 @@ import thinRibbon from '../../../assets/icons/thinRibbon.svg';
 import butterfly from '../../../assets/icons/butterfly.svg';
 import { useTranslation } from 'react-i18next';
 import resumePDF from '../../../assets/resume/Cuarez_Resume.pdf'
-import { motion } from 'motion/react';
 const FooterSection = () => {
 
   const { t } = useTranslation('translations');
@@ -42,19 +41,12 @@ const FooterSection = () => {
   };
   return (
     <div className="container mx-auto px-4">
-      <motion.div
-        initial={{ y: 48, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 2 }}
-        className="divider my-8 mx-auto"></motion.div>
-      <motion.div
-        initial={{ y: 48, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 2 }}
+      <div className="divider my-8 mx-auto"></div>
+      <div
         className='my-10 grid grid-cols-1 md:grid-cols-3 gap-5 max-w-10/12 mx-auto *:my-3 *:md:my-1'>
         <div className='flex flex-col md:items-start items-center space-y-2'>
           <div className='flex flex-row gap-2 items-center'>
-            <img src={thinRibbon} className='size-6' />
+            <img src={thinRibbon} className='size-6' alt="Decorative ribbon" />
             <h1 className='text-2xl font-bold coquette-font text-center md:text-start text-rose-300'>{t('details.wholeName')}</h1>
           </div>
           <p className='text-lg text-center md:text-start'>{t('details.description')}</p>
@@ -84,51 +76,48 @@ const FooterSection = () => {
         </div>
         <div className='flex flex-col md:items-end items-center space-y-2'>
           <h2 className='uppercase text-base text-rose-300 font-bold '>{t('getInTouch')}</h2>
-          <div
-            className='flex flex-row gap-2 items-center cursor-pointer hover:opacity-80 transition-opacity'
+          <button
+            className='flex flex-row gap-2 items-center cursor-pointer hover:opacity-80 transition-opacity bg-transparent border-0'
             onClick={handleEmailClick}
+            aria-label="Send email"
           >
             <div className='bg-rose-50 p-2 rounded-full'>
               <MailIcon className='size-5 text-rose-300' />
             </div>
             <p className='text-sm  hover:text-rose-400 '>{t('details.emailAdd')}</p>
-          </div>
-          <div
-            className='flex flex-row gap-2 items-center cursor-pointer hover:opacity-80 transition-opacity'
-            onClick={() => handleLocationClick('Bulacan, Philippines')}
+          </button>
+          <button
+            className='flex flex-row gap-2 items-center cursor-pointer hover:opacity-80 transition-opacity\
+             bg-transparent border-0'
+            onClick={() => handleLocationClick(t('details.secLoc'))}
+            aria-label="View location on map"
           >
             <div className='bg-rose-50 p-2 rounded-full'>
               <LocationIcon className='size-5 text-rose-300' />
             </div>
             <p className='text-sm hover:text-rose-400 '>{t('details.secLoc')}</p>
-          </div>
-          <div
-            className=' flex-row gap-2 items-center cursor-pointer hidden md:flex hover:opacity-80 transition-opacity'
+          </button>
+          <button
+            className='flex-row gap-2 items-center cursor-pointer hidden md:flex hover:opacity-80
+            transition-opacity bg-transparent border-0'
             onClick={() => handleLocationClick(t('details.primLoc'))}
+            aria-label="View primary location on map"
           >
             <div className='bg-rose-50 p-2 rounded-full'>
               <LocationIcon className='size-5 text-rose-300' />
             </div>
             <p className='text-sm hover:text-rose-400 '>{t('details.primLoc')}</p>
-          </div>
+          </button>
         </div>
-      </motion.div>
-      <motion.div
-        initial={{ y: 48, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 2 }}
-        className="divider my-8 mx-auto"></motion.div>
-      <motion.div
-        initial={{ y: 48, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 2 }}
-      >
-        <img src={butterfly} className='size-30 mx-auto' />
+      </div>
+      <div className="divider my-8 mx-auto"></div>
+      <div>
+        <img src={butterfly} className='size-30 mx-auto' alt="Decorative butterfly" />
         <div className='text-center space-y-4 mb-20 md:mb-0'>
           <p className='text-sm coquette-font font-bold gradient-text'>{t('details.sigQuote')}</p>
           <p className='text-xs'>{t('details.copyright')}</p>
         </div>
-      </motion.div>
+      </div>
 
     </div >
   )

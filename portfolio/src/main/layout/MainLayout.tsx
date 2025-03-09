@@ -6,17 +6,16 @@ import ReactLenis from 'lenis/react';
 const MainLayout = () => {
   return (
     <div className="min-h-screen">
+      <header>
+        <NavigationBar />
+      </header>
       <ReactLenis root
-        options={{ lerp: 0.09 }}>
-        <header>
-          <NavigationBar />
-        </header>
+        options={{ lerp: 0.05 }}>
         <main>
           <Outlet />
         </main>
       </ReactLenis>
-
-    </div>
+    </div >
   )
 }
 

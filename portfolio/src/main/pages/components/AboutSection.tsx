@@ -11,35 +11,32 @@ const AboutSection = () => {
 
   return (
     <div className="relative ">
-      <div className="min-h-screen flex flex-col gap-2 lg:gap-5 lg:flex-row items-center justify-center lg:px-8">
-        <motion.div
-          initial={{ y: 48, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ ease: "easeOut", duration: 2 }}
+      <div
+        className="min-h-screen flex flex-col gap-2 lg:gap-5 lg:flex-row items-center justify-center lg:px-8">
+        <div
           className="w-full lg:w-1/2 max-w-xl">
           <img src={me} className='me-image w-full' alt="Czarina Cuarez" />
-        </motion.div>
-        <motion.div
-          initial={{ y: 48, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ ease: "easeOut", duration: 2 }}
+        </div>
+        <div
           className="w-full lg:w-1/2 max-w-xl space-y-4 text-center lg:text-start px-4 lg:px-0">
           <p className="font-straight text-xs md:text-sm uppercase font-bold text-rose-300">{t("details.title")}</p>
           <h2 className="md:text-5xl text-3xl font-normal font-straight">  {t('intro.greets')} <br className="lg:hidden" />
             <span className="text-rose-300 coquette-font font-bold">{t('details.wholeName')}</span>
           </h2>
-          <p className=" text-sm md:text-base">
+          <div className="text-sm md:text-base">
             {t('intro.intro')}
             <span className='coquette-font font-bold text-rose-300 text-lg lg:text-xl'> {t('intro.role')}</span>
             {t('intro.workplace')}
-            <br></br><br></br>
-            {t('intro.passion')}
-            <span className='coquette-font font-bold text-rose-300 text-lg lg:text-xl'> {t('intro.personality')} </span>
-            {t('intro.growth')}
-            <br></br><br></br>
-            {t('intro.now')}
-          </p>
-          <div className='flex gap-3  justify-center lg:justify-start'>
+            <div className="mt-4">
+              {t('intro.passion')}
+              <span className='coquette-font font-bold text-rose-300 text-lg lg:text-xl'> {t('intro.personality')} </span>
+              {t('intro.growth')}
+            </div>
+            <div className="mt-4">
+              {t('intro.now')}
+            </div>
+          </div>
+          <div className='flex gap-3 justify-center lg:justify-start'>
             <a href={t('details.socials.github')} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
               <GithubIcon className='size-6 hover:text-rose-300' />
             </a>
@@ -47,9 +44,8 @@ const AboutSection = () => {
               <LinkedinIcon className='size-6 hover:text-rose-300' />
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
-
       <motion.div
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -74,9 +70,7 @@ const AboutSection = () => {
               </OutlineButton>
             ))}
           </div>
-
         </div>
-
       </motion.div>
 
     </div>
