@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PinkOutlineContainer from '../PinkOutlineContainer/PinkOutlineContainer';
 import { motion } from 'motion/react';
+import DOMPurify from 'dompurify';
 
 interface NoOutlineCardProps {
   title: string;
@@ -69,7 +70,7 @@ function NoOutlineCard({
       <div className="mt-4 space-y-2 flex-1 flex flex-col justify-between">
         <div className="space-y-2">
           <h3 className="text-2xl text-rose-300 font-bold">{title}</h3>
-          <p dangerouslySetInnerHTML={{ __html: description }} className="base" />
+          <p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description) }} className="base" />
         </div>
         <div className="flex justify-between items-center">
           <span className="text-sm ">{type}</span>

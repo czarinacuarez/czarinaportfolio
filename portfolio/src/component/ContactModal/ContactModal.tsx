@@ -85,7 +85,7 @@ export function ContactModal({ open, setOpen }: DragCloseDrawerProps): React.Rea
 
     try {
       const form = new FormData();
-      form.append("access_key", "2e3d3149-35d4-45d2-9b89-a931bb2bb276");
+      form.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
       form.append("name", formData.name);
       form.append("email", formData.email);
       form.append("message", formData.message);

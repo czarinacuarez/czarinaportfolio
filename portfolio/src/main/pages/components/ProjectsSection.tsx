@@ -27,12 +27,12 @@ const ProjectsSection = () => {
   // Early return if no projects
   if (!projects.length) return null;
   return (
-    <div className="container mx-auto md:pt-40 md:pb-20">
+    <div className="container mx-auto lg:pt-40 lg:pb-20">
       <motion.div
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeOut", duration: 2 }}
-        className='md:mb-30 lg:mb-40 mb-0'>
+        className='lg:mb-30 lg:mb-40 mb-0'>
         <p className="font-straight  text-sm uppercase font-bold my-4 text-center">{t('projCategory.description')}</p>
         <h2 id="achievements-heading" className="text-5xl text-rose-300 coquette-font font-bold text-center">
           {t('titles.projects')}
@@ -43,7 +43,7 @@ const ProjectsSection = () => {
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeOut", duration: 2 }}
-        className="md:hidden">
+        className="lg:hidden">
         <HorizontalCarousel projects={projects} />
       </motion.div>
 
@@ -52,7 +52,7 @@ const ProjectsSection = () => {
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeOut", duration: 2 }}
-        className="hidden md:grid md:grid-cols-2 gap-1 lg:gap-8">
+        className="hidden lg:grid lg:grid-cols-2 gap-1 lg:gap-8">
         <div className="space-y-20">
           {projects.map((project) => {
             const [ref, inView] = useInView({
@@ -89,7 +89,7 @@ const ProjectsSection = () => {
                 >
                   <motion.img
                     whileHover={{ scale: 1.03 }}
-                    src={`/src/assets/projects/${project.image}`}
+                    src={`/assets/projects/${project.image}`}
                     alt={project.title}
                     className="w-full h-full object-cover rounded-2xl "
                   />

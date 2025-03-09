@@ -9,30 +9,31 @@ const ContactSection = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <motion.div
-      className="contact-container home-shadow max-w-4xl w-full py-30 mx-5 md:mx-10 lg:mx-auto rounded-default relative"
-      initial={{ y: 48, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ ease: "easeOut", duration: 2 }} >
-      <ContactModal open={open} setOpen={setOpen} />
+    <div className=' w-full  flex items-center justify-center'>
+      <motion.div
+        className="contact-container home-shadow py-20 md:py-30 px-10 md:px-20 rounded-2xl relative"
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }} >
+        <ContactModal open={open} setOpen={setOpen} />
 
-      <motion.img
-        src={sparkling}
-        alt="sparkles"
-        className="absolute inset-0 m-auto w-90 md:w-80 h-full pointer-events-none"
-
-      />
-      <h1 className="font-bold text-5xl coquette-title darker text-center text-white max-w-xl mx-auto relative z-10">
-        {t('contactCategory.title')}
-      </h1>
-      <div className="flex justify-center relative z-10">
-        <ShinyButton onClick={() => setOpen(true)}
-          className="text-white mt-5 darker">{t('getInTouch')}</ShinyButton>
-      </div>
-      <span className='text-xl text-center text-white font-bold coquette-description darker block mt-5 relative z-10'>
-        {t('contactCategory.slot')}
-      </span>
-    </motion.div >
+        <img
+          src={sparkling}
+          alt="sparkles"
+          className="absolute inset-0 m-auto w-90 md:w-80 h-full pointer-events-none"
+        />
+        <h1 className="font-bold text-5xl coquette-title darker text-center text-white max-w-xl mx-auto relative z-10">
+          {t('contactCategory.title')}
+        </h1>
+        <div className="flex justify-center relative z-10">
+          <ShinyButton onClick={() => setOpen(true)}
+            className="text-white mt-5 darker">{t('getInTouch')}</ShinyButton>
+        </div>
+        <span className='text-xl text-center text-white font-bold coquette-description darker block mt-5 relative z-10'>
+          {t('contactCategory.slot')}
+        </span>
+      </motion.div >
+    </div>
   )
 }
 

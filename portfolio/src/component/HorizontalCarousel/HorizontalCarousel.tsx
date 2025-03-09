@@ -50,7 +50,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <div className="h-[200px] md:h-[300px] rounded-lg overflow-hidden bg-beige-100">
         <motion.img
           whileHover={{ scale: 1.03 }}
-          src={`/src/assets/projects/${project.image}`}
+          src={`/assets/projects/${project.image}`}
           alt={project.title}
           className="w-full h-full object-cover rounded-2xl "
         />

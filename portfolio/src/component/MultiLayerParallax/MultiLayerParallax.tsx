@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import React, { useEffect, useRef, useState } from 'react';
-import sparkling from '../../assets/img/sparkling.webp';
+import sparkling from '../../assets/icons/sparklings.svg';
 import ShinyButton from "../ShinyButton/ShinyButton";
 import CopyButton from "../CopyButton/CopyButton";
 import { useTranslation } from "react-i18next";
@@ -49,14 +49,11 @@ export default function MultiLayerParallax() {
     <div
       ref={ref}
       className="w-full h-screen overflow-hidden relative grid place-items-center">
-      <ContactModal open={open} setOpen={setOpen} />
-
-
+      <ContactModal open={open} setOpen={setOpen} aria-modal="true" />
       <motion.div style={{ y: textY }} className="relative flex items-center justify-center z-10 mb-10">
-        <motion.img
+        <img
           src={sparkling}
-          alt=""
-          className="absolute top-5 z-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-20 z-3 left-1/2 transform -translate-x-2/4 -translate-y-1/2"
         />
         <motion.div
           initial={{ y: 48, opacity: 0 }}
