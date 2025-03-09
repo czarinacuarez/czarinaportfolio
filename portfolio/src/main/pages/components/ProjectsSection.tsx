@@ -28,19 +28,31 @@ const ProjectsSection = () => {
   if (!projects.length) return null;
   return (
     <div className="container mx-auto md:pt-40 md:pb-20">
-      <div className='md:mb-30 lg:mb-40 mb-0'>
+      <motion.div
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        className='md:mb-30 lg:mb-40 mb-0'>
         <p className="font-straight  text-sm uppercase font-bold my-4 text-center">{t('projCategory.description')}</p>
         <h2 id="achievements-heading" className="text-5xl text-rose-300 coquette-font font-bold text-center">
           {t('titles.projects')}
         </h2>
-      </div>
+      </motion.div>
 
-      <div className="md:hidden">
+      <motion.div
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        className="md:hidden">
         <HorizontalCarousel projects={projects} />
-      </div>
+      </motion.div>
 
       {/* Desktop layout - only show on larger screens */}
-      <div className="hidden md:grid md:grid-cols-2 gap-1 lg:gap-8">
+      <motion.div
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        className="hidden md:grid md:grid-cols-2 gap-1 lg:gap-8">
         <div className="space-y-20">
           {projects.map((project) => {
             const [ref, inView] = useInView({
@@ -129,7 +141,7 @@ const ProjectsSection = () => {
             </div>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
       {/* {isLastProject && (
         <div className="text-center mt-20">
           <ShinyButton>

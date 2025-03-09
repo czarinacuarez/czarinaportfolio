@@ -4,13 +4,16 @@ import ShinyButton from '../../../component/ShinyButton/ShinyButton';
 import sparkling from '../../../assets/icons/sparklingButterfly.svg';
 import { useTranslation } from 'react-i18next';
 import { ContactModal } from '../../../component/ContactModal/ContactModal';
-
 const ContactSection = () => {
   const { t } = useTranslation('translations');
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="contact-container home-shadow max-w-4xl w-full py-30 mx-5 md:mx-10 lg:mx-auto rounded-default relative">
+    <motion.div
+      className="contact-container home-shadow max-w-4xl w-full py-30 mx-5 md:mx-10 lg:mx-auto rounded-default relative"
+      initial={{ y: 48, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ ease: "easeOut", duration: 2 }} >
       <ContactModal open={open} setOpen={setOpen} />
 
       <motion.img
@@ -29,7 +32,7 @@ const ContactSection = () => {
       <span className='text-xl text-center text-white font-bold coquette-description darker block mt-5 relative z-10'>
         {t('contactCategory.slot')}
       </span>
-    </div>
+    </motion.div >
   )
 }
 

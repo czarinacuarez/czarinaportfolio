@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import logo from '../../assets/logo/logo.webp';
 import type { Variants } from "motion/react"
 import { AboutIcon, ExperienceIcon, HomeIcon, ProjectsIcon, ResumeIcon } from '../../assets/icons';
+import resume from '../../assets/resume/Cuarez_Resume.pdf?url';
 const navItems = ['home', 'about', 'experience', 'projects'] as const;
 
 interface PathProps {
@@ -167,7 +168,8 @@ const NavigationBar = () => {
             />
           ))}
 
-          <a href="/resume.pdf" className='mx-4 special' >
+          <a href={resume} target="_blank"
+            rel="noopener noreferrer" className='mx-4 special'>
             <div className='flex gap-2 align-center rounded-2xl p-2 *:text-rose-300'>
               <div className='bg-rose-50 p-3 rounded-xl'>
                 <ResumeIcon className='size-6' />
@@ -214,7 +216,8 @@ const NavigationBar = () => {
             </button>
           ))}
           <a
-            href="/resume.pdf"
+            href={resume} target="_blank"
+            rel="noopener noreferrer"
             className={activeSection === 'home' ? 'special-a home-shadow' : 'special-a default-shadow'}
           >
             {t('titles.resume')}

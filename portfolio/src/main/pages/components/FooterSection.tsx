@@ -3,8 +3,8 @@ import { GithubIcon, LinkedinIcon, LocationIcon, MailIcon } from '../../../asset
 import thinRibbon from '../../../assets/icons/thinRibbon.svg';
 import butterfly from '../../../assets/icons/butterfly.svg';
 import { useTranslation } from 'react-i18next';
-
-
+import resumePDF from '../../../assets/resume/Cuarez_Resume.pdf'
+import { motion } from 'motion/react';
 const FooterSection = () => {
 
   const { t } = useTranslation('translations');
@@ -22,6 +22,14 @@ const FooterSection = () => {
     window.location.href = "mailto:czarinakrisel@gmail.com";
   };
 
+  const handleClick = (id: string) => {
+    if (id === 'resume') {
+      window.open(resumePDF, '_blank', 'noopener,noreferrer');
+    } else {
+      scrollToSection(id);
+    }
+  };
+
   const handleLocationClick = (location: string) => {
     window.open(`https://www.google.com/maps/search/${encodeURIComponent(location)}`, '_blank');
   };
@@ -34,8 +42,16 @@ const FooterSection = () => {
   };
   return (
     <div className="container mx-auto px-4">
-      <div className="divider my-8 mx-auto"></div>
-      <div className='my-10 grid grid-cols-1 md:grid-cols-3 gap-5 max-w-10/12 mx-auto *:my-3 *:md:my-1'>
+      <motion.div
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        className="divider my-8 mx-auto"></motion.div>
+      <motion.div
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        className='my-10 grid grid-cols-1 md:grid-cols-3 gap-5 max-w-10/12 mx-auto *:my-3 *:md:my-1'>
         <div className='flex flex-col md:items-start items-center space-y-2'>
           <div className='flex flex-row gap-2 items-center'>
             <img src={thinRibbon} className='size-6' />
@@ -58,7 +74,7 @@ const FooterSection = () => {
               {navigationItems.map(({ id, label }) => (
                 <button
                   key={id}
-                  onClick={() => scrollToSection(id)}
+                  onClick={() => handleClick(id)}
                 >
                   {label}
                 </button>
@@ -96,13 +112,24 @@ const FooterSection = () => {
             <p className='text-sm hover:text-rose-400 '>{t('details.primLoc')}</p>
           </div>
         </div>
-      </div>
-      <div className="divider my-8 mx-auto"></div>
-      <img src={butterfly} className='size-30 mx-auto' />
-      <div className='text-center space-y-4 mb-20 md:mb-0'>
-        <p className='text-sm coquette-font font-bold gradient-text'>{t('details.sigQuote')}</p>
-        <p className='text-xs'>{t('details.copyright')}</p>
-      </div>
+      </motion.div>
+      <motion.div
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        className="divider my-8 mx-auto"></motion.div>
+      <motion.div
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+      >
+        <img src={butterfly} className='size-30 mx-auto' />
+        <div className='text-center space-y-4 mb-20 md:mb-0'>
+          <p className='text-sm coquette-font font-bold gradient-text'>{t('details.sigQuote')}</p>
+          <p className='text-xs'>{t('details.copyright')}</p>
+        </div>
+      </motion.div>
+
     </div >
   )
 }

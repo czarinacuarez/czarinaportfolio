@@ -4,7 +4,7 @@ import { AchievementCategory } from '../../../interface';
 import NoOutlineCard from '../../../component/NoOutlineCard/NoOutlineCard';
 import firstPattern from '../../../assets/img/firstPattern.png';
 import secondPattern from '../../../assets/img/secondPattern.png';
-
+import { motion } from "motion/react";
 interface AchievementsCategoryTranslation {
   items: AchievementCategory[];
 }
@@ -18,13 +18,23 @@ const AchievementsSection = () => {
   const items = rawData?.items || [];
   return (
     <div className="flex flex-col justify-center items-center py-10 w-full md:max-w-4xl">
-      <p className="font-straight text-rose-300 text-sm uppercase font-bold my-4 text-center">
-        {t('achieveCategory.description')}
-      </p>
-      <h2 id="achievements-heading" className="text-4xl md:text-5xl coquette-font font-bold text-center">
-        {t('titles.achievements')}
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 w-full max-w-7xl px-4 md:px-8 mt-10">
+      <motion.div
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }}>
+        <p className="font-straight text-rose-300 text-sm uppercase font-bold my-4 text-center">
+          {t('achieveCategory.description')}
+        </p>
+        <h2 id="achievements-heading" className="text-4xl md:text-5xl coquette-font font-bold text-center">
+          {t('titles.achievements')}
+        </h2>
+      </motion.div>
+
+      <motion.div
+        initial={{ y: 48, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeOut", duration: 2 }}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 w-full max-w-7xl px-4 md:px-8 mt-10">
         {items.map((item) => (
           <NoOutlineCard
             key={item.title}
@@ -36,8 +46,8 @@ const AchievementsSection = () => {
             placeholder={item.placeholder === 'firstPattern' ? firstPattern : secondPattern}
           />
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </div >
   );
 }
 

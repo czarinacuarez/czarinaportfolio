@@ -57,16 +57,12 @@ export default function MultiLayerParallax() {
           src={sparkling}
           alt=""
           className="absolute top-5 z-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          animate={{
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
         />
-        <motion.div className="*:text-center *:text-white *:font-bold text-center">
+        <motion.div
+          initial={{ y: 48, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ ease: "easeOut", duration: 0.75 }}
+          className="*:text-center *:text-white *:font-bold text-center">
           <motion.h1 className="font-bold coquette-title  text-7xl md:text-8xl relative z-2 ">
             {t('details.wholeName')}
           </motion.h1>
@@ -88,14 +84,6 @@ export default function MultiLayerParallax() {
       </motion.div>
       <motion.div
         ref={cloudsRef}
-        animate={{
-          scale: [1, 1.1, 1],
-        }}
-        transition={{
-          duration: 5,
-          ease: "easeInOut",
-          repeat: Infinity,
-        }}
         className="absolute inset-0 clouds-parallax "
         aria-hidden="true" /* Decorative animation element */
       />
