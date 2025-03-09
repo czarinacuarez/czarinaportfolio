@@ -84,6 +84,7 @@ export function ContactModal({ open, setOpen }: DragCloseDrawerProps): React.Rea
     if (!isFormValid) return;
 
     setIsSubmitting(true);
+    console.log(isSubmitting);
 
     try {
       const form = new FormData();
