@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 import thinRibbon from '../../../assets/icons/thinribbon.svg';
@@ -17,7 +17,7 @@ interface ProjectCardProps {
 }
 
 // Separate ProjectCard component with React.memo for performance
-const ProjectCard = React.memo(({ project, onInView }: ProjectCardProps) => {
+const ProjectCard = memo(({ project, onInView }: ProjectCardProps) => {
   const [hasNotified, setHasNotified] = useState(false);
   const [ref, inView] = useInView({
     threshold: 0.6,

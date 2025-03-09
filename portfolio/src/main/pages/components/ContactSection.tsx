@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ShinyButton from '../../../component/ShinyButton/ShinyButton';
 import sparkling from '../../../assets/icons/sparklingButterfly.svg';
 import { useTranslation } from 'react-i18next';

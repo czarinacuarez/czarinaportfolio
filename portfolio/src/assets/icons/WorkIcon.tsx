@@ -1,4 +1,4 @@
-import React, { SVGProps } from 'react';
+import { SVGProps } from 'react';
 
 function WorkIcon(props: SVGProps<SVGSVGElement>) {
   return (

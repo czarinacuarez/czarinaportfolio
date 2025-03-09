@@ -1,4 +1,3 @@
-import React from 'react';
 import "./TimelineCardStyle.css";
 import { TimelineCategory } from '../../interface';
 import TimelineItems from './TimelineItem/TimelineItems';

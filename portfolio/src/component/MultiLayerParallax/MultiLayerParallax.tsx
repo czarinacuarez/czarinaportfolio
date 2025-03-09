@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "motion/react";
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import sparkling from '../../assets/icons/sparklings.svg';
 import ShinyButton from "../ShinyButton/ShinyButton";
 import CopyButton from "../CopyButton/CopyButton";

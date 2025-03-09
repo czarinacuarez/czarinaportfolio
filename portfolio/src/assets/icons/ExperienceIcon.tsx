@@ -1,4 +1,4 @@
-import React, { SVGProps } from 'react';
+import { SVGProps } from 'react';
 
 function ExperienceIcon(props: SVGProps<SVGSVGElement>) {
   return (

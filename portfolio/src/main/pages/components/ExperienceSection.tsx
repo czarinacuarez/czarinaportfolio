@@ -1,4 +1,3 @@
-import React from 'react';
 import TimelineCard from '../../../component/TimelineCard/TimelineCard';
 import { useTranslation } from 'react-i18next';
 import { TimelineCategory } from '../../../interface';

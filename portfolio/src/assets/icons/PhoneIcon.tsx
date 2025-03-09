@@ -1,4 +1,4 @@
-import React, { SVGProps } from 'react';
+import { SVGProps } from 'react';
 
 function PhoneIcon(props: SVGProps<SVGSVGElement>) {
   return (
