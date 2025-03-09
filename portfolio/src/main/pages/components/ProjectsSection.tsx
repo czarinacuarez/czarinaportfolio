@@ -1,7 +1,7 @@
 import { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
-import thinRibbon from '@assets/icons/thinRibbon.svg';
+import thinRibbon from '../../../assets/icons/thinRibbon.svg';
 import OutlineButton from '../../../component/OutlineButton/OutlineButton';
 import { ProjectCategory } from '../../../interface';
 import { useTranslation } from 'react-i18next';
