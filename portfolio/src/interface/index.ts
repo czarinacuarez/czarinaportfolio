@@ -30,6 +30,6 @@ export interface ProjectCategory {
   items: string[];
   tech: string[];
   image: string;
-  live?: string;
+  link?: string;
   github?: string;
 }
