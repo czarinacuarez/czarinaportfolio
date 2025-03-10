@@ -130,7 +130,7 @@ const NavigationBar = () => {
         {/* Add the mobile menu animation */}
       </div>
       <motion.div
-        initial={false}
+        initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={{
           open: {
@@ -152,8 +152,7 @@ const NavigationBar = () => {
             }
           }
         }}
-        className="fixed  md:hidden  z-50 left-0 right-0 top-[80px] mx-auto w-[90%] max-w-[800px] lg:hidden"
-        id="mobile-menu" role="menu"
+        className={`fixed md:hidden z-50 left-0 right-0 top-[80px] mx-auto w-[90%] max-w-[800px] lg:hidden ${!isOpen && 'hidden'}`} id="mobile-menu" role="menu"
       >
         <nav className={`flex flex-col gap-2 mobile-nav justify-between  *:text-left  rounded-3xl p-3
         *:rounded-default *:py-2 *:transition-colors *:duration-300 *:hover:active *:focus-visible:active
@@ -169,8 +168,8 @@ const NavigationBar = () => {
           ))}
 
           <a href={resume} target="_blank"
-            rel="noopener noreferrer" className='mx-4 special'>
-            <div className='flex gap-2 align-center rounded-2xl p-2 *:text-rose-300'>
+            rel="noopener noreferrer" className='mx-3 special'>
+            <div className='flex gap-2 align-center rounded-2xl *:text-rose-300'>
               <div className='bg-rose-50 p-3 rounded-xl'>
                 <ResumeIcon className='size-6' />
               </div>
@@ -216,11 +215,16 @@ const NavigationBar = () => {
             </button>
           ))}
           <a
-            href={resume} target="_blank"
+            href={resume}
+            target="_blank"
             rel="noopener noreferrer"
-            className={activeSection === 'home' ? 'special-a home-shadow' : 'special-a default-shadow'}
+            className={`${activeSection === 'home' ? 'special-a home-shadow' : 'special-a default-shadow'} flex items-center justify-center px-4`}
+            style={{ height: '40px' }} // Match button height
           >
-            {t('titles.resume')}
+            <span className="flex items-center gap-2">
+              <ResumeIcon className="size-5" />
+              {t('titles.resume')}
+            </span>
           </a>
         </nav>
       </motion.div>

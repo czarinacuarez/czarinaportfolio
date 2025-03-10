@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import NavigationBar from '../../component/NavigationBar/NavigationBar'
-import ReactLenis from 'lenis/react';
+import { ReactLenis } from 'lenis/react';
 
 const MainLayout = () => {
   return (

@@ -23,7 +23,7 @@ const ExperienceSection = () => {
         </h2>
         <div className='flex justify-center items-center my-8'>
           <div
-            className="grid gap-4 md:grid-cols-2 grid-cols-1">
+            className="grid gap-6 md:grid-cols-2 grid-cols-1">
             {categories.map((category, index) => (
               <TimelineCard
                 key={`category-${category.title}-${index}`}
