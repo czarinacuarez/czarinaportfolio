@@ -1,5 +1,5 @@
 import { motion } from "motion/react"
-import pinkRibbon from "../../assets/icons/ribbon.svg"
+import { ribbon } from "../../assets/designs"
 
 const LoadingSpinner = () => {
   return (
@@ -8,7 +8,7 @@ const LoadingSpinner = () => {
         {[0, 1, 2].map((index) => (
           <motion.img
             key={index}
-            src={pinkRibbon}
+            src={ribbon}
             alt="loading dot"
             className="w-10 h-10"
             animate={{

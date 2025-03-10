@@ -2,6 +2,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import OutlineButton from "../OutlineButton/OutlineButton";
 import { ProjectCategory } from "../../interface";
+import { GithubIcon, LinkIcon } from "../../assets/icons";
 
 interface HorizontalCarouselProps {
   projects: ProjectCategory[];
@@ -64,6 +65,30 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <h2 className="text-xl md:text-2xl font-bold">
             {project.title}
           </h2>
+          <div className="flex gap-1">
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full  "
+                aria-label={`Visit ${project.title} demo`}
+              >
+                <LinkIcon className="size-5 text-rose-400 hover:text-black" />
+              </a>
+            )}
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full transition-colors"
+                aria-label={`View ${project.title} source code on GitHub`}
+              >
+                <GithubIcon className="size-5 text-rose-400 hover:text-black" />
+              </a>
+            )}
+          </div>
         </div>
 
         <div className="flex-grow space-y-4">

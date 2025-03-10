@@ -1,11 +1,13 @@
 import { memo, useCallback, useEffect, useMemo, useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { LazyMotion, domAnimation, AnimatePresence } from 'motion/react';
+import * as m from 'motion/react-m';
 import { useInView } from 'react-intersection-observer';
-import thinRibbon from '../../../assets/icons/thinRibbon.svg';
 import OutlineButton from '../../../component/OutlineButton/OutlineButton';
 import { ProjectCategory } from '../../../interface';
 import { useTranslation } from 'react-i18next';
 import HorizontalCarousel from '../../../component/HorizontalCarousel/HorizontalCarousel';
+import { thinRibbon } from '../../../assets/designs';
+import { GithubIcon, LinkIcon } from '../../../assets/icons';
 
 interface ProjCategoryTranslation {
   projects: ProjectCategory[];
@@ -44,7 +46,7 @@ const ProjectCard = memo(({ project, onInView }: ProjectCardProps) => {
         backfaceVisibility: 'hidden'
       }}
     >
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: inView ? 1 : 0.5 }}
         transition={{
@@ -52,7 +54,7 @@ const ProjectCard = memo(({ project, onInView }: ProjectCardProps) => {
         }}
         className="h-full w-full p-5 bg-beige-100 rounded-2xl"
       >
-        <motion.img
+        <m.img
           whileHover={{ scale: 1.03 }}
           transition={{ duration: 0.2 }}
           src={`/assets/projects/${project.image}`}
@@ -61,7 +63,7 @@ const ProjectCard = memo(({ project, onInView }: ProjectCardProps) => {
           loading="lazy"
           style={{ willChange: 'transform' }}
         />
-      </motion.div>
+      </m.div>
     </div>
   );
 });
@@ -94,79 +96,105 @@ const ProjectsSection = () => {
   if (!projects.length) return null;
 
   return (
-    <div className="container mx-auto lg:pt-40 lg:pb-20">
-      <div
-        className='lg:mb-30 lg:mb-40 mb-0'>
-        <p className="font-straight text-sm uppercase font-bold my-4 text-center">
-          {t('projCategory.description')}
-        </p>
-        <h2 id="achievements-heading" className="text-5xl text-rose-300 coquette-font font-bold text-center">
-          {t('titles.projects')}
-        </h2>
-      </div>
-
-      <div
-        className="lg:hidden">
-        <HorizontalCarousel projects={projects} />
-      </div>
-
-      <div
-        className="hidden lg:grid lg:grid-cols-2 gap-1 lg:gap-8">
-        <div className="space-y-20">
-          {projectElements}
+    <LazyMotion features={domAnimation}>
+      <div className="container mx-auto lg:pt-40 lg:pb-20">
+        <div
+          className='lg:mb-30 lg:mb-40 mb-0'>
+          <p className="font-straight text-sm uppercase font-bold my-4 text-center">
+            {t('projCategory.description')}
+          </p>
+          <h2 id="achievements-heading" className="text-5xl text-rose-300 coquette-font font-bold text-center">
+            {t('titles.projects')}
+          </h2>
         </div>
 
-        <div className="sticky top-30 h-fit">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeProject.id}
-              initial={{ opacity: 0, y: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 0 }}
-              transition={{ duration: 0.3 }}
-              style={{ willChange: 'transform, opacity' }}
-            >
-              <div className={`
+        <div
+          className="lg:hidden">
+          <HorizontalCarousel projects={projects} />
+        </div>
+
+        <div
+          className="hidden lg:grid lg:grid-cols-2 gap-1 lg:gap-8">
+          <div className="space-y-20">
+            {projectElements}
+          </div>
+
+          <div className="sticky top-30 h-fit">
+            <AnimatePresence mode="wait">
+              <m.div
+                key={activeProject.id}
+                initial={{ opacity: 0, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 0 }}
+                transition={{ duration: 0.3 }}
+                style={{ willChange: 'transform, opacity' }}
+              >
+                <div className={`
                 flex flex-col align-start lg:px-10 px-5 pt-10
                 h-full min-h-[500px]
                 ${isLastProject ? 'justify-between' : ''}
               `}>
-                <div className='flex flex-row gap-2'>
-                  <img
-                    src={thinRibbon}
-                    className='size-10'
-                    alt="Ribbon decoration"
-                    loading="lazy"
-                  />
-                  <h2 className="text-2xl font-bold mb-4">
-                    {activeProject.title}
-                  </h2>
-                </div>
+                  <div className='flex flex-row gap-2'>
+                    <img
+                      src={thinRibbon}
+                      className='size-10'
+                      alt="Ribbon decoration"
+                      loading="lazy"
+                    />
+                    <h2 className="text-2xl font-bold mb-4">
+                      {activeProject.title}
+                    </h2>
+                    <div className="flex gap-1">
+                      {activeProject.link && (
+                        <a
+                          href={activeProject.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-full  "
+                          aria-label={`Visit ${activeProject.title} demo`}
+                        >
+                          <LinkIcon className="size-5 text-rose-400 hover:text-black" />
+                        </a>
+                      )}
+                      {activeProject.github && (
+                        <a
+                          href={activeProject.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-full transition-colors"
+                          aria-label={`View ${activeProject.title} source code on GitHub`}
+                        >
+                          <GithubIcon className="size-5 text-rose-400 hover:text-black" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  <div className="flex-grow pl-12">
 
-                <div className="flex-grow pl-12">
-                  <p className="text-lg">
-                    {activeProject.description}
-                  </p>
-                  <ul className="text-sm font-semibold my-6 space-y-2">
-                    {activeProject.items.map((item, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="mr-2">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mx-auto flex max-w-4xl flex-wrap text-sm text-gray-800 gap-2">
-                    {activeProject.tech.map((item, index) => (
-                      <OutlineButton key={index}>{item}</OutlineButton>
-                    ))}
+                    <p className="text-lg">
+                      {activeProject.description}
+                    </p>
+                    <ul className="text-sm font-semibold my-6 space-y-2">
+                      {activeProject.items.map((item, index) => (
+                        <li key={index} className="flex items-start">
+                          <span className="mr-2">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mx-auto flex max-w-4xl flex-wrap text-sm text-gray-800 gap-2">
+                      {activeProject.tech.map((item, index) => (
+                        <OutlineButton key={index}>{item}</OutlineButton>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+              </m.div>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
-    </div>
+    </LazyMotion>
   );
 };
 

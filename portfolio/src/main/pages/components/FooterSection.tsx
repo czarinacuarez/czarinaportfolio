@@ -1,8 +1,7 @@
 import { GithubIcon, LinkedinIcon, LocationIcon, MailIcon } from '../../../assets/icons';
-import thinRibbon from '../../../assets/icons/thinRibbon.svg';
-import butterfly from '../../../assets/icons/butterfly.svg';
 import { useTranslation } from 'react-i18next';
 import resumePDF from '../../../assets/resume/Cuarez_Resume.pdf'
+import { butterfly, thinRibbon } from '../../../assets/designs';
 const FooterSection = () => {
 
   const { t } = useTranslation('translations');
