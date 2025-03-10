@@ -1,9 +1,9 @@
 import me from "../../../assets/img/me.webp"
 import { GithubIcon, LinkedinIcon } from '../../../assets/icons';
 import OutlineButton from '../../../component/OutlineButton/OutlineButton';
-import butterflyRibbon from "../../../assets/icons/butterflyRibbon.svg";
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
+import { butterflyribbon } from "../../../assets/designs";
 
 const AboutSection = () => {
   const { t } = useTranslation("translations");
@@ -50,7 +50,7 @@ const AboutSection = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeOut", duration: 2 }}
         className="min-h-screen flex flex-col items-center justify-center my-10 x-10 lg:my-0">
-        <img src={butterflyRibbon} alt="Butterfly Ribbon Decoration" />
+        <img src={butterflyribbon} alt="Butterfly Ribbon Decoration" />
         <p className="font-straight text-sm uppercase font-bold my-4 text-center">{t('techCategory.description')}</p>
         <h2 className="text-5xl text-rose-300 coquette-font font-bold">
           {t('titles.techStack')}

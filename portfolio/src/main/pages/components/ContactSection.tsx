@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import ShinyButton from '../../../component/ShinyButton/ShinyButton';
-import sparkling from '../../../assets/icons/sparklingButterfly.svg';
 import { useTranslation } from 'react-i18next';
 import { ContactModal } from '../../../component/ContactModal/ContactModal';
+import { sparklingButterfly } from '../../../assets/designs';
 const ContactSection = () => {
   const { t } = useTranslation('translations');
   const [open, setOpen] = useState(false);
@@ -13,9 +13,8 @@ const ContactSection = () => {
         className="contact-container home-shadow py-20 md:py-30 px-10 md:px-20 rounded-2xl relative"
       >
         <ContactModal open={open} setOpen={setOpen} />
-
         <img
-          src={sparkling}
+          src={sparklingButterfly}
           alt="sparkles"
           className="absolute inset-0 m-auto w-90 md:w-80 h-full pointer-events-none"
         />

@@ -1,10 +1,11 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from 'react';
-import sparkling from '../../assets/icons/sparklings.svg';
 import ShinyButton from "../ShinyButton/ShinyButton";
 import CopyButton from "../CopyButton/CopyButton";
 import { useTranslation } from "react-i18next";
 import { ContactModal } from "../ContactModal/ContactModal";
+import { sparkling } from "../../assets/designs";
+
 
 export default function MultiLayerParallax() {
   const ref = useRef(null);
