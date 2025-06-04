@@ -20,10 +20,10 @@
   "intro": {
     "greets": "Hi, I'm ",
     "intro": "I am an achiever, a perfectionist, and an aspiring",
-    "role": "full-stack developer ",
+    "role": "cloud / full stack engineer ",
     "workplace": "who currently sets her new foot unto the workplace.",
-    "passion": "My passion for software development—and",
-    "personality": "a love for all things pink",
+    "passion": "My passion for",
+    "personality": "software & cloud engineering",
     "growth": "—drives me to continuously learn and grow in this exciting field.",
     "now": "Now, I'm focusing on clean code principles and industry best practices to deliver exceptional software solutions."
   },
@@ -31,7 +31,7 @@
     "title": "About Me",
     "wholeName": "Czarina Cuarez",
     "description": "Gracefully crafting full-stack solutions to elevate your company’s success.",
-    "position": "Full Stack Developer",
+    "position": "Cloud / Full Stack Engineer",
     "emailAdd": "czarinakrisel@gmail.com",
     "primLoc": "San Jose del Monte, Bulacan, Philippines",
     "secLoc": "Metro Manila, Philippines",
@@ -187,9 +187,14 @@
         "icon": "WorkIcon",
         "items": [
           {
+            "role": "Devops Engineer Intern",
+            "institution": "JLabs Innovatech Inc.",
+            "date": "May 2025 - Present"
+          },
+          {
             "role": "Software Developer Intern",
             "institution": "JLabs Innovatech Inc.",
-            "date": "Dec 2024 - Feb 2025"
+            "date": "Dec 2024 - May 2025"
           }
         ]
       }
@@ -294,28 +299,60 @@
     "description": "Beyond that, my passion for tech has driven me to accomplish these",
     "items": [
       {
-        "title": "FIRST PLACER & MOST INNOVATIVE SOLUTION",
+        "title": "Bronze Awardee, StartupQC Finalist",
+        "type": "Business Plan Competition",
+        "description": "<b>EcoSave RVM</b> was selected as one of the top 37 finalists in <b>StartupQC Students Edition 2</b>, a business plan competition organized by the Quezon City Government.",
+        "date": "May 2025",
+        "placeholder": "firstPattern",
+        "image": "https://lh3.googleusercontent.com/d/1ibqviNNM7U_PNkggdncd-VZm4RK71_mB"
+      },
+      {
+        "title": "AWS Certified Cloud Practitioner",
+        "type": "Certification",
+        "description": "<b>AWS Certified Cloud Practitioner</b> is an entry-level certification that validates foundational cloud knowledge and skills, including AWS services, security, architecture, pricing, and support.",
+        "date": "April 2025",
+        "placeholder": "secondPattern",
+        "image": "https://lh3.googleusercontent.com/d/1EiXMRSYtA4bKWckAFAhTNef4C0knz6Bf"
+      },
+      {
+        "title": "ICINT 2025 Excellent Oral Presentation Award",
+        "type": "Conference",
+        "description": "Awarded for the excellent oral presentation of our research paper, <b>MuzonEcoSave: Recyclables Recovery Rewarding Machine</b>, at the <b>International Conference on Information Technology (ICINT) 2025</b>.",
+        "date": "April 2025",
+        "placeholder": "firstPattern",
+        "image": "https://lh3.googleusercontent.com/d/1U0iRM98kfQwNuEsCcciyfZzMXErQKuc8"
+      },
+      {
+        "title": "First Placer & Most Innovative Solution Award",
         "type": "Ideathon",
         "description": "<b>QCEcoSave: Reverse Vending Machine</b>, our idea entry, competed with schools across Quezon City and secured an award in <b>Reinventing Cities: Design for Smart and Sustainable Cities</b> at <b>DOST-NCR</b>.",
         "date": "October 2024",
         "placeholder": "secondPattern",
-        "image": "https://scontent.fmnl8-6.fna.fbcdn.net/v/t39.30808-6/465459238_969192975246340_1277584423299692402_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHj6-MPWT-iA_7LXi8kW5XZ6c0Uplnn7hTpzRSmWefuFOeqtzLCwF1A-60jtVHjieOOACLJcHR5kRiQgIvSXZuN&_nc_ohc=AGLlxZPfSQYQ7kNvgFdV5xV&_nc_oc=AdhvTwm7D-qgIP-fSD_FdpseA--tQPD7hjvlJk4xUwZQlZwrBE6ua7OhC7zARxV1WWaVrz7OeIrsWRsFhTE8iCbK&_nc_zt=23&_nc_ht=scontent.fmnl8-6.fna&_nc_gid=AlqhUP7B2ltVJFwCkCz_U4X&oh=00_AYHIjPPCA9zGBCGRVdUBCUzqqeav4v08dYaep75HU8Vuhg&oe=67D1A181"
+        "image": "https://lh3.googleusercontent.com/d/12oK4V1F5LRTZwSdxSNFDQcm0H0UYcvjP"
       },
       {
-        "title": "CHAMPION",
+        "title": "Champion",
         "type": "Hackathon",
         "description": "Our entry, <b>Sibol: An AI-Powered Planting Application</b>, won the championship in <b>InnOlympics 2024: GDSC-PLM Hackathon</b>, competing against <b>30+ schools</b> from various cities.",
         "date": "April 2024",
         "placeholder": "firstPattern",
-        "image": "https://scontent.fmnl8-2.fna.fbcdn.net/v/t39.30808-6/480736876_622256657358233_2106745415923249969_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGS7H-9a-OXozI3VdqB17ABagMkRVGmspJqAyRFUaaykmC_GX5X1LfOGLYC0S1IUJeNpmCMWRcSCAELzh2FwtJG&_nc_ohc=HBdT9V74Ka8Q7kNvgF-zpBH&_nc_oc=AdidPJDPh4upc6JvKCUj01zCGCXJOjUKJTxLmzIWRAuFQeSj1w1DtGyW3AL_fLcm7vswSeQx4C-8nVRUmBtVR30J&_nc_zt=23&_nc_ht=scontent.fmnl8-2.fna&_nc_gid=A6fDL85pjVzZ02mbaxgcFbg&oh=00_AYF0dTgHjE202P4-JT_eYZ0HDnhtmYITIaREKnHDCZVRGw&oe=67D1B84F"
+        "image": "https://lh3.googleusercontent.com/d/19m5OUWfj1eyPjo9tyKjg_N_uX1bMKRaD"
       },
       {
         "title": "ACP Cloud Security",
         "type": "Certification",
         "description": "<b>Alibaba Cloud's Cloud Security Certification (ACP Level - Alibaba Cloud Certified Professional)</b> is a professional technical certification oriented to <b>architects, developers, and O&M personnel</b> that use Alibaba Cloud products.",
         "date": "October 2023",
+        "placeholder": "secondPattern",
+        "image": "https://lh3.googleusercontent.com/d/16aBInfNzl7dl9yr1Btak1kv1wZTuK5TD"
+      },
+      {
+        "title": "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
+        "type": "Certification",
+        "description": "<b>Oracle Cloud Infrastructure Foundations Associate</b> is a certification that validates foundational knowledge of Oracle Cloud Infrastructure services, including core concepts, architecture, and security.",
+        "date": "August 2023",
         "placeholder": "firstPattern",
-        "image": "https://media.licdn.com/dms/image/v2/D562DAQElh53Y79ypJw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1701167869337?e=1741975200&v=beta&t=vn2RjMYlbcK0zp1p22LDFmvjRzQhscVagFESogGkPLM"
+        "image": "https://lh3.googleusercontent.com/d/1CQQYo6oxKQ6BdlDHMDTNW4FUCUdwVoRq"
       },
       {
         "title": "ACA Cloud Computing",
@@ -323,7 +360,7 @@
         "description": "<b>Alibaba Cloud Certification Associate (ACA - Alibaba Cloud Certification Associate)</b> is a certification designed for those who can use <b>Alibaba Cloud Computing</b> products.",
         "date": "May 2023",
         "placeholder": "secondPattern",
-        "image": "https://media.licdn.com/dms/image/v2/D562DAQEPubA75BctqQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1701168041960?e=1741975200&v=beta&t=w-ybfIOP5-wD1N0TMpEwkPXue6plovTKR5EdO9XG3VQ"
+        "image": "https://lh3.googleusercontent.com/d/1a8jZJ_w03WTVeUnE7HeA95q6KdUG_ENB"
       }
     ]
   },

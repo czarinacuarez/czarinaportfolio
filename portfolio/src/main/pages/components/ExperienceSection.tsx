@@ -30,7 +30,9 @@ const ExperienceSection = () => {
                 category={category}
               />
             ))}
-            <img src={rabbitheart} className='items-center m-auto my-2 md:my-0' />
+            <div className='hidden md:flex items-center justify-center'>
+              <img src={rabbitheart} className='items-center m-auto my-2 md:my-0' />
+            </div>
           </div>
         </div>
       </div>

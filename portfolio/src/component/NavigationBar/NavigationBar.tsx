@@ -152,9 +152,9 @@ const NavigationBar = () => {
             }
           }
         }}
-        className={`fixed md:hidden z-50 left-0 right-0 top-[80px] mx-auto w-[90%] max-w-[800px] lg:hidden ${!isOpen && 'hidden'}`} id="mobile-menu" role="menu"
+        className={`fixed md:hidden z-50 left-0 right-0 top-[80px] mx-auto w-[90%] max-w-[800px]  lg:hidden ${!isOpen && 'hidden'}`} id="mobile-menu" role="menu"
       >
-        <nav className={`flex flex-col gap-2 mobile-nav justify-between  *:text-left  rounded-3xl p-3
+        <nav className={`flex flex-col gap-2 mobile-nav justify-between  *:text-left  rounded-3xl p-3 max-h-[calc(100dvh-90px)] overflow-y-auto rounded-3xl
         *:rounded-default *:py-2 *:transition-colors *:duration-300 *:hover:active *:focus-visible:active
            ${activeSection === 'home' ? 'home-shadow' : 'default-shadow'}`}>
           {navItems.map((item) => (

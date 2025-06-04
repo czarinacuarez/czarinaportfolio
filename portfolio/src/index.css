@@ -35,19 +35,17 @@
   -webkit-box-shadow: 0px 4px 42.2px var(--color-rose-500);
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   height: 12px;
-  width: 12px;
+  width: 10px;
   background: white;
 }
-
-
 
 ::-webkit-scrollbar-thumb:active {
   background: var(--color-rose-300);
   -webkit-box-shadow: 0px 4px 42.2px var(--color-rose-400);
 }
-*/
+
 html {
   scroll-behavior: smooth;
 }

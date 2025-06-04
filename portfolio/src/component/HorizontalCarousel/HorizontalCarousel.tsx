@@ -3,7 +3,7 @@ import { useRef } from "react";
 import OutlineButton from "../OutlineButton/OutlineButton";
 import { ProjectCategory } from "../../interface";
 import { GithubIcon, LinkIcon } from "../../assets/icons";
-
+import { useWindowHeight } from "../../hooks/useWindowHeight";
 interface HorizontalCarouselProps {
   projects: ProjectCategory[];
 }
@@ -47,10 +47,15 @@ interface ProjectCardProps {
   project: ProjectCategory;
 }
 const ProjectCard = ({ project }: ProjectCardProps) => {
+  const height = useWindowHeight();
+  const ifHeightShort = height <= 400;
+
   return (
-    <div className="space-y-8 p-6 border border-rose-400 rounded-2xl min-w-[200px] w-[100vw] max-w-[450px]">
-      {/* Image */}
-      <div className="h-[200px] md:h-[300px] rounded-lg overflow-hidden bg-beige-100">
+    <div
+      className={`${ifHeightShort ? "space-y-2 py-2 px-2" : "space-y-8 py-6 px-6"
+        } border border-rose-400 rounded-2xl min-w-[200px] w-[100vw] max-w-[450px]`}
+    >      {/* Image */}
+      <div className={`${ifHeightShort ? "h-[180px]" : "h-[200px] md:h-[300px]"} rounded-lg overflow-hidden bg-beige-100`}>
         <motion.img
           whileHover={{ scale: 1.03 }}
           src={`/assets/projects/${project.image}`}
@@ -61,8 +66,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
       {/* Description */}
       <div className="flex flex-col h-full">
-        <div className='flex flex-row gap-2 items-center mb-4'>
-          <h2 className="text-xl md:text-2xl font-bold">
+        <div className='flex flex-row gap-2 items-center mb-2'>
+          <h2 className={`${ifHeightShort ? "text-sm" : "text-xl md:text-2xl"} font-bold`}>
             {project.title}
           </h2>
           <div className="flex gap-1">
@@ -90,14 +95,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             )}
           </div>
         </div>
-
         <div className="flex-grow space-y-4">
-          <p className="text-base md:text-lg">
+          <p className={`${ifHeightShort ? "text-xs" : "text-base md:text-lg"}`}>
             {project.description}
           </p>
 
           <div className="flex flex-wrap gap-2">
-            {project.tech.map((item, index) => (
+            {(ifHeightShort ? project.tech.slice(0, 2) : project.tech).map((item, index) => (
               <OutlineButton
                 key={index}
                 className="text-xs py-1 px-3"
@@ -105,6 +109,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 {item}
               </OutlineButton>
             ))}
+            {ifHeightShort && project.tech.length > 2 && (
+              <span className="text-xs py-1 px-3 text-rose-400">+{project.tech.length - 2} more</span>
+            )}
           </div>
         </div>
       </div>

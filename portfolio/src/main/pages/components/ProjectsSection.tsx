@@ -103,7 +103,7 @@ const ProjectsSection = () => {
           <p className="font-straight text-sm uppercase font-bold my-4 text-center">
             {t('projCategory.description')}
           </p>
-          <h2 id="achievements-heading" className="text-5xl text-rose-300 coquette-font font-bold text-center">
+          <h2 id="achievements-heading" className="text-5xl text-rose-300 coquette-font font-bold text-center mb-4">
             {t('titles.projects')}
           </h2>
         </div>
