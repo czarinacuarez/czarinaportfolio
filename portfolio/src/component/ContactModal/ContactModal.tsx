@@ -21,7 +21,7 @@ interface DragCloseDrawerProps {
   setOpen: (open: boolean) => void;
 }
 
-const ContactModal = ({ open, setOpen }: DragCloseDrawerProps) => {
+export function ContactModal({ open, setOpen }: DragCloseDrawerProps): React.ReactElement {
   const [scope, animate] = useAnimate();
   const [drawerRef, { height }] = useMeasure();
   const [formData, setFormData] = useState({
@@ -247,5 +247,3 @@ const ContactModal = ({ open, setOpen }: DragCloseDrawerProps) => {
     </>
   );
 }
-
-export default ContactModal;

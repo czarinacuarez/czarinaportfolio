@@ -5,7 +5,7 @@ import CopyButton from "../CopyButton/CopyButton";
 import { useTranslation } from "react-i18next";
 import { sparkling } from "../../assets/designs";
 
-const ContactModal = lazy(() => import('../ContactModal/ContactModal'));
+const ContactModal = lazy(() => import("../ContactModal/ContactModal"));
 
 export default function MultiLayerParallax() {
   const ref = useRef(null);

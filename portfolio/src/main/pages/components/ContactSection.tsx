@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ShinyButton from '../../../component/ShinyButton/ShinyButton';
 import { useTranslation } from 'react-i18next';
-import ContactModal from '../../../component/ContactModal/ContactModal';
+import { ContactModal } from '../../../component/ContactModal/ContactModal';
 import { sparklingButterfly } from '../../../assets/designs';
 const ContactSection = () => {
   const { t } = useTranslation('translations');
