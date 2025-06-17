@@ -51,7 +51,7 @@ export default function MultiLayerParallax() {
       ref={ref}
       className="w-full h-screen overflow-hidden relative grid place-items-center">
       <ContactModal open={open} setOpen={setOpen} aria-modal="true" />
-      <motion.div style={{ y: textY }} className="relative flex items-center justify-center z-10 mb-2 mt-2">
+      <motion.div style={{ y: textY }} className="relative flex items-center justify-center z-10 mb-10">
         <img
           src={sparkling}
           loading="lazy"
@@ -84,7 +84,7 @@ export default function MultiLayerParallax() {
       </motion.div>
       <motion.div
         ref={cloudsRef}
-        className="absolute inset-0 mt-2 clouds-parallax "
+        className="absolute inset-0 clouds-parallax "
         aria-hidden="true" /* Decorative animation element */
       />
     </div >
