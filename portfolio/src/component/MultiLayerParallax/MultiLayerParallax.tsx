@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 import ShinyButton from "../ShinyButton/ShinyButton";
 import CopyButton from "../CopyButton/CopyButton";
 import { useTranslation } from "react-i18next";
-import { sparkling } from "../../assets/designs";
 import { ContactModal } from "../ContactModal/ContactModal";
 
 
