@@ -1,11 +1,11 @@
 import { motion, useScroll, useTransform } from "motion/react";
-import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import ShinyButton from "../ShinyButton/ShinyButton";
 import CopyButton from "../CopyButton/CopyButton";
 import { useTranslation } from "react-i18next";
 import { sparkling } from "../../assets/designs";
+import { ContactModal } from "../ContactModal/ContactModal";
 
-const ContactModal = lazy(() => import("../ContactModal/ContactModal"));
 
 export default function MultiLayerParallax() {
   const ref = useRef(null);
