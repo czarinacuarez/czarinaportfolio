@@ -54,7 +54,6 @@ export default function MultiLayerParallax() {
       <motion.div style={{ y: textY }} className="relative flex items-center justify-center z-10 mb-10">
         <img
           src={sparkling}
-          loading="lazy"
           alt="Sparkling effect"
           className="absolute top-20 z-3 left-1/2 transform -translate-x-2/4 -translate-y-1/2"
         />
