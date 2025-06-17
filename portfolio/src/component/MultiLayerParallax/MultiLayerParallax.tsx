@@ -52,11 +52,6 @@ export default function MultiLayerParallax() {
       className="w-full h-screen overflow-hidden relative grid place-items-center">
       <ContactModal open={open} setOpen={setOpen} aria-modal="true" />
       <motion.div style={{ y: textY }} className="relative flex items-center justify-center z-10 mb-10">
-        <img
-          src={sparkling}
-          alt="Sparkling effect"
-          className="absolute top-20 z-3 left-1/2 transform -translate-x-2/4 -translate-y-1/2"
-        />
         <motion.div
           initial={{ y: 48, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
