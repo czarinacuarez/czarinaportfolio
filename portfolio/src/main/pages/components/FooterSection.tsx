@@ -44,7 +44,7 @@ const FooterSection = () => {
         className='my-10 grid grid-cols-1 md:grid-cols-3 gap-5 max-w-10/12 mx-auto *:my-3 *:md:my-1'>
         <div className='flex flex-col md:items-start items-center space-y-2'>
           <div className='flex flex-row gap-2 items-center'>
-            <img src={thinRibbon} className='size-6' alt="Decorative ribbon" />
+            <img src={thinRibbon} loading="lazy" className='size-6' alt="Decorative Thin Aesthetic Ribbon" />
             <h1 className='text-2xl font-bold coquette-font text-center md:text-start text-rose-300'>{t('details.wholeName')}</h1>
           </div>
           <p className='text-lg text-center md:text-start'>{t('details.description')}</p>
@@ -110,7 +110,7 @@ const FooterSection = () => {
       </div>
       <div className="divider my-8 mx-auto"></div>
       <div>
-        <img src={butterfly} className='size-30 mx-auto' alt="Decorative butterfly" />
+        <img src={butterfly} loading="lazy" className='size-30 mx-auto' alt="Decorative Butterfly" />
         <div className='text-center space-y-4 mb-20 md:mb-0'>
           <p className='text-sm coquette-font font-bold gradient-text'>{t('details.sigQuote')}</p>
           <p className='text-xs'>{t('details.copyright')}</p>

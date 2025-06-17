@@ -31,7 +31,7 @@ const ExperienceSection = () => {
               />
             ))}
             <div className='hidden md:flex items-center justify-center'>
-              <img src={rabbitheart} className='items-center m-auto my-2 md:my-0' />
+              <img src={rabbitheart} loading="lazy" alt='Rabbit Heart Design' className='items-center m-auto my-2 md:my-0' />
             </div>
           </div>
         </div>

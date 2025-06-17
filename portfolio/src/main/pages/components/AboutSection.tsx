@@ -14,7 +14,10 @@ const AboutSection = () => {
         className="min-h-screen flex flex-col gap-2 lg:gap-5 lg:flex-row items-center justify-center lg:px-8">
         <div
           className="w-full lg:w-1/2 max-w-xl">
-          <img src={me} className='me-image w-full' alt="Czarina Cuarez" />
+          <img src={me}
+            loading="lazy"
+            className='me-image w-full'
+            alt="Czarina Cuarez Picture" />
         </div>
         <div
           className="w-full lg:w-1/2 max-w-xl space-y-4 text-center lg:text-start px-4 lg:px-0">
@@ -50,7 +53,7 @@ const AboutSection = () => {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeOut", duration: 2 }}
         className="min-h-screen flex flex-col items-center justify-center my-10 x-10 lg:my-0">
-        <img src={butterflyribbon} alt="Butterfly Ribbon Decoration" />
+        <img src={butterflyribbon} loading="lazy" alt="Butterfly Ribbon Decoration" />
         <p className="font-straight text-sm uppercase font-bold my-4 text-center">{t('techCategory.description')}</p>
         <h2 className="text-5xl text-rose-300 coquette-font font-bold">
           {t('titles.techStack')}
@@ -61,8 +64,9 @@ const AboutSection = () => {
               <OutlineButton key={tech.name} className="text-xs lg:text-sm py-1 px-3"
               >
                 <img
+                  loading="lazy"
                   src={`/assets/techStack/${tech.icon}`}
-                  alt={tech.name}
+                  alt={`${tech.name} logo`}
                   className="w-5 h-5 mr-2 inline-block transition-all"
                 />
                 {tech.name}

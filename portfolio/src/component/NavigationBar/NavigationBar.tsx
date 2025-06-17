@@ -117,9 +117,8 @@ const NavigationBar = () => {
   };
   return (
     <div>
-
       <div className='fixed md:hidden  w-full top-0 z-50 flex p-2 justify-between my-2 items-center bg-transparent'>
-        <img src={logo} className='size-16 ' alt="Portfolio Logo"></img>
+        <img src={logo} loading="lazy" className='size-16 ' alt="Portfolio Logo"></img>
         <motion.nav
           className=' px-3'
           initial={false}
@@ -202,7 +201,7 @@ const NavigationBar = () => {
         transition={{ duration: 0.2 }}
         className="fixed top-0 hidden  z-50  md:flex pt-2 w-full  justify-center"
       >
-        <img src={logo} className='size-16  ' alt="Portfolio Logo"></img>
+        <img src={logo} loading="lazy" className='size-16' alt="Portfolio Logo - Mobile"></img>
         <nav className={`hidden md:flex main-nav justify-between gap-2 rounded-3xl p-3 *:rounded-default *:py-2 *:transition-colors *:duration-300 *:hover:active *:focus-visible:active ${activeSection === 'home' ? 'home-shadow' : 'default-shadow'}`}>
           {navItems.map((item) => (
             <button

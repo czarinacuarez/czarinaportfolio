@@ -9,7 +9,8 @@ const LoadingSpinner = () => {
           <motion.img
             key={index}
             src={ribbon}
-            alt="loading dot"
+            loading="lazy"
+            alt={`loading dot ${index}`}
             className="w-10 h-10"
             animate={{
               scale: [1, 1.5, 1],

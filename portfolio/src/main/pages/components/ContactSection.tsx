@@ -15,7 +15,8 @@ const ContactSection = () => {
         <ContactModal open={open} setOpen={setOpen} />
         <img
           src={sparklingButterfly}
-          alt="sparkles"
+          alt="Sparkling Butterfly Decoration"
+          loading="lazy"
           className="absolute inset-0 m-auto w-90 md:w-80 h-full pointer-events-none"
         />
         <h1 className="font-bold text-5xl coquette-title darker text-center text-white max-w-xl mx-auto relative z-10">

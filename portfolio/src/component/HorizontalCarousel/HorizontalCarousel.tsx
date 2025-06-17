@@ -59,7 +59,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         <motion.img
           whileHover={{ scale: 1.03 }}
           src={`/assets/projects/${project.image}`}
-          alt={project.title}
+          alt={`${project.title} project image - mobile view`}
+          loading="lazy"
           className="w-full h-full object-cover rounded-2xl "
         />
       </div>

@@ -44,7 +44,9 @@ function NoOutlineCard({
         group-hover:ring-2 group-hover:ring-rose-200/50">
         {/* Placeholder image - hidden on mobile */}
         <motion.img
+          loading="lazy"
           src={placeholder}
+          alt={`${title} placeholder image`}
           className="w-full h-full object-cover hidden lg:block"
           animate={{ opacity: isHovered ? 0 : 1 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
@@ -52,6 +54,8 @@ function NoOutlineCard({
 
         {/* Main image - always visible on mobile */}
         <motion.img
+          loading="lazy"
+          alt={`${title} main image`}
           src={image}
           className="absolute inset-0 w-full h-full object-cover lg:opacity-0"
           animate={{ opacity: isHovered ? 1 : 0 }}
@@ -61,8 +65,9 @@ function NoOutlineCard({
         {/* Mobile-only main image (no animation) */}
         <img
           src={image}
+          loading="lazy"
           className="w-full h-full object-cover lg:hidden"
-          alt={title}
+          alt={`${title} main image mobile`}
         />
       </div>
 

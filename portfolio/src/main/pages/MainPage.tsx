@@ -34,7 +34,10 @@ const MainPage = () => {
               transition={{ ease: "easeOut", duration: 2 }}
               id="about" className='relative ' >
               <AboutSection />
-              <img src={bubbles} alt="bubbles" className="absolute hidden lg:block top-100 -right-80 w-1/2" />
+              <img src={bubbles}
+                loading='lazy'
+                alt='Decorative Bubbles Illustration'
+                className="absolute hidden lg:block top-100 -right-80 w-1/2" />
             </m.section>
           </div>
           <m.section
@@ -44,8 +47,9 @@ const MainPage = () => {
             className='relative'>
             <img
               src={bunny}
+              loading='lazy'
               className="absolute hidden lg:block -top-120 z-10 -left-40 w-full lg:max-w-xl max-w-2xl  mx-auto"
-              alt="Decorative bunny illustration"
+              alt="Decorative Bunny Illustration"
             />
           </m.section>
           <m.section
@@ -55,9 +59,10 @@ const MainPage = () => {
             id="experience" className='relative min-h-screen overflow-hidden px-3'>
             <ExperienceSection />
             <img
+              loading="lazy"
               src={cherry}
               className="absolute hidden lg:block top-0 z-10 -right-50 w-full lg:max-w-xl max-w-2xl  mx-auto"
-              alt="Decorative cherry illustration"
+              alt="Decorative Cherry illustration"
             />
           </m.section>
           <m.section
@@ -66,9 +71,10 @@ const MainPage = () => {
             transition={{ ease: "easeOut", duration: 2 }}
             className='relative'>
             <img
+              loading="lazy"
               src={strawberry}
               className="absolute hidden lg:block -top-100 z-10 -left-50 w-full lg:max-w-2xl max-w-2xl  mx-auto"
-              alt="Decorative strawberry illustration"
+              alt="Decorative Strawberry illustration"
             />
           </m.section>
 
@@ -90,6 +96,7 @@ const MainPage = () => {
 
           <section id="contact" className="py-20 flex mx-3 lg:mx-0 justify-center items-center relative overflow-hidden">
             <img
+              loading="lazy"
               src={bubblesLeft}
               className="absolute hidden lg:block -left-60 w-full lg:max-w-4xl   mx-auto"
               alt="Decorative bubbles left illustration"
@@ -98,6 +105,7 @@ const MainPage = () => {
               <ContactSection />
             </div>
             <img
+              loading="lazy"
               src={bubblesRight}
               className="absolute hidden lg:block   -right-60  w-full lg:max-w-4xl  mx-auto"
               alt="Decorative bubbles right illustration"

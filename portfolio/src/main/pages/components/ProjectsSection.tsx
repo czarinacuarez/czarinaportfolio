@@ -58,7 +58,7 @@ const ProjectCard = memo(({ project, onInView }: ProjectCardProps) => {
           whileHover={{ scale: 1.03 }}
           transition={{ duration: 0.2 }}
           src={`/assets/projects/${project.image}`}
-          alt={project.title}
+          alt={`${project.title} Project Image`}
           className="w-full h-full object-cover rounded-2xl"
           loading="lazy"
           style={{ willChange: 'transform' }}
@@ -138,7 +138,7 @@ const ProjectsSection = () => {
                     <img
                       src={thinRibbon}
                       className='size-10'
-                      alt="Ribbon decoration"
+                      alt="Thin Aesthetic Ribbon Decoration"
                       loading="lazy"
                     />
                     <h2 className="text-2xl font-bold mb-4">
