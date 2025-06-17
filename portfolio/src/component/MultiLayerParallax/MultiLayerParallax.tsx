@@ -1,11 +1,11 @@
 import { motion, useScroll, useTransform } from "motion/react";
-import { useEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import ShinyButton from "../ShinyButton/ShinyButton";
 import CopyButton from "../CopyButton/CopyButton";
 import { useTranslation } from "react-i18next";
-import { ContactModal } from "../ContactModal/ContactModal";
 import { sparkling } from "../../assets/designs";
 
+const ContactModal = lazy(() => import("../ContactModal/ContactModal"));
 
 export default function MultiLayerParallax() {
   const ref = useRef(null);
@@ -50,7 +50,9 @@ export default function MultiLayerParallax() {
     <div
       ref={ref}
       className="w-full h-screen overflow-hidden relative grid place-items-center">
-      <ContactModal open={open} setOpen={setOpen} aria-modal="true" />
+      <Suspense fallback={null}>
+        {open && <ContactModal open={open} setOpen={setOpen} aria-modal="true" />}
+      </Suspense>
       <motion.div style={{ y: textY }} className="relative flex items-center justify-center z-10 mb-10">
         <img
           src={sparkling}

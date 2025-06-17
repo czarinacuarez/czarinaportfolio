@@ -21,7 +21,7 @@ const SectionLoader = () => (
 const MainPage = () => {
   return (
     <LazyMotion features={domAnimation}>
-      <div >
+      <div className='relative'>
         <section id="home" className='relative'>
           <HomeSection />
         </section>
